@@ -38,7 +38,7 @@ def allowed_file(filename: str) -> bool:
 
 @app.get("/")
 def root():
-    return redirect(url_for("client_page"))
+    return send_from_directory(PAGES_DIR, "index.html")
 
 
 @app.get("/client")
