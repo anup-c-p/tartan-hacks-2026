@@ -29,6 +29,17 @@ var translations = {
     'activity.syncPending': 'Sync pending for', 'activity.photosSynced': 'Photos synced to',
     'activity.5min': '5 minutes ago', 'activity.20min': '20 minutes ago',
     'activity.45min': '45 minutes ago', 'activity.1hr': '1 hour ago',
+    'cust.orders': 'Orders', 'cust.favorites': 'Favorites',
+    'cust.title': 'What\'s your vibe?', 'cust.subtitle': 'Find the perfect restaurant for your current mood.',
+    'cust.trending': 'Trending Near You',
+    'vibe.cozy': 'Cozy', 'vibe.lateNight': 'Late Night', 'vibe.healthy': 'Healthy',
+    'vibe.dateNight': 'Date Night', 'vibe.party': 'Party',
+    'food.chinese': 'Chinese', 'food.italian': 'Italian', 'food.american': 'American',
+    'food.japanese': 'Japanese', 'food.mexican': 'Mexican', 'food.salad': 'Salad',
+    'food.indian': 'Indian', 'food.steak': 'Steak', 'food.cafe': 'Cafe', 'food.pizza': 'Pizza',
+    'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
+    'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
+    'promo.freeDelivery': 'Free Delivery', 'promo.bogoPizza': 'BOGO Pizza', 'promo.20off': '20% Off',
     'search.placeholder': 'Search'
   },
 
@@ -62,6 +73,17 @@ var translations = {
     'activity.syncPending': 'Sincro pendiente para', 'activity.photosSynced': 'Fotos sincronizadas con',
     'activity.5min': 'hace 5 minutos', 'activity.20min': 'hace 20 minutos',
     'activity.45min': 'hace 45 minutos', 'activity.1hr': 'hace 1 hora',
+    'cust.orders': 'Pedidos', 'cust.favorites': 'Favoritos',
+    'cust.title': '¿Cuál es tu onda?', 'cust.subtitle': 'Encuentra el restaurante perfecto para tu estado de ánimo.',
+    'cust.trending': 'Tendencia Cerca de Ti',
+    'vibe.cozy': 'Acogedor', 'vibe.lateNight': 'Nocturno', 'vibe.healthy': 'Saludable',
+    'vibe.dateNight': 'Cita', 'vibe.party': 'Fiesta',
+    'food.chinese': 'China', 'food.italian': 'Italiana', 'food.american': 'Americana',
+    'food.japanese': 'Japonesa', 'food.mexican': 'Mexicana', 'food.salad': 'Ensalada',
+    'food.indian': 'India', 'food.steak': 'Carne', 'food.cafe': 'Café', 'food.pizza': 'Pizza',
+    'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
+    'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
+    'promo.freeDelivery': 'Envío Gratis', 'promo.bogoPizza': '2x1 Pizza', 'promo.20off': '20% Desc.',
     'search.placeholder': 'Buscar'
   },
 
@@ -95,6 +117,17 @@ var translations = {
     'activity.syncPending': '等待同步', 'activity.photosSynced': '照片已同步到',
     'activity.5min': '5分钟前', 'activity.20min': '20分钟前',
     'activity.45min': '45分钟前', 'activity.1hr': '1小时前',
+    'cust.orders': '订单', 'cust.favorites': '收藏',
+    'cust.title': '今天想吃什么？', 'cust.subtitle': '根据心情找到完美的餐厅。',
+    'cust.trending': '附近热门',
+    'vibe.cozy': '舒适', 'vibe.lateNight': '夜宵', 'vibe.healthy': '健康',
+    'vibe.dateNight': '约会', 'vibe.party': '派对',
+    'food.chinese': '中餐', 'food.italian': '意大利菜', 'food.american': '美式',
+    'food.japanese': '日料', 'food.mexican': '墨西哥菜', 'food.salad': '沙拉',
+    'food.indian': '印度菜', 'food.steak': '牛排', 'food.cafe': '咖啡', 'food.pizza': '披萨',
+    'time.1020': '10-20分钟', 'time.1525': '15-25分钟', 'time.2030': '20-30分钟',
+    'time.3040': '30-40分钟', 'time.3045': '30-45分钟', 'time.4560': '45-60分钟',
+    'promo.freeDelivery': '免费配送', 'promo.bogoPizza': '买一送一披萨', 'promo.20off': '八折优惠',
     'search.placeholder': '搜索'
   },
 
@@ -128,6 +161,17 @@ var translations = {
     'activity.syncPending': '동기화 대기 중:', 'activity.photosSynced': '사진 동기화 완료:',
     'activity.5min': '5분 전', 'activity.20min': '20분 전',
     'activity.45min': '45분 전', 'activity.1hr': '1시간 전',
+    'cust.orders': '주문', 'cust.favorites': '즐겨찾기',
+    'cust.title': '오늘 기분은?', 'cust.subtitle': '지금 기분에 딱 맞는 레스토랑을 찾아보세요.',
+    'cust.trending': '근처 인기',
+    'vibe.cozy': '아늑한', 'vibe.lateNight': '야식', 'vibe.healthy': '건강식',
+    'vibe.dateNight': '데이트', 'vibe.party': '파티',
+    'food.chinese': '중식', 'food.italian': '이탈리안', 'food.american': '미국식',
+    'food.japanese': '일식', 'food.mexican': '멕시칸', 'food.salad': '샐러드',
+    'food.indian': '인도', 'food.steak': '스테이크', 'food.cafe': '카페', 'food.pizza': '피자',
+    'time.1020': '10-20분', 'time.1525': '15-25분', 'time.2030': '20-30분',
+    'time.3040': '30-40분', 'time.3045': '30-45분', 'time.4560': '45-60분',
+    'promo.freeDelivery': '무료 배달', 'promo.bogoPizza': '피자 1+1', 'promo.20off': '20% 할인',
     'search.placeholder': '검색'
   },
 
@@ -161,6 +205,17 @@ var translations = {
     'activity.syncPending': '同期保留中:', 'activity.photosSynced': '写真同期先:',
     'activity.5min': '5分前', 'activity.20min': '20分前',
     'activity.45min': '45分前', 'activity.1hr': '1時間前',
+    'cust.orders': '注文', 'cust.favorites': 'お気に入り',
+    'cust.title': '今の気分は？', 'cust.subtitle': '気分にぴったりのレストランを見つけましょう。',
+    'cust.trending': '近くのトレンド',
+    'vibe.cozy': 'くつろぎ', 'vibe.lateNight': '夜食', 'vibe.healthy': 'ヘルシー',
+    'vibe.dateNight': 'デート', 'vibe.party': 'パーティー',
+    'food.chinese': '中華', 'food.italian': 'イタリアン', 'food.american': 'アメリカン',
+    'food.japanese': '和食', 'food.mexican': 'メキシカン', 'food.salad': 'サラダ',
+    'food.indian': 'インド', 'food.steak': 'ステーキ', 'food.cafe': 'カフェ', 'food.pizza': 'ピザ',
+    'time.1020': '10-20分', 'time.1525': '15-25分', 'time.2030': '20-30分',
+    'time.3040': '30-40分', 'time.3045': '30-45分', 'time.4560': '45-60分',
+    'promo.freeDelivery': '送料無料', 'promo.bogoPizza': 'ピザ1つ買うと1つ無料', 'promo.20off': '20%オフ',
     'search.placeholder': '検索'
   },
 
@@ -194,6 +249,17 @@ var translations = {
     'activity.syncPending': 'Synchro en attente pour', 'activity.photosSynced': 'Photos synchronisées avec',
     'activity.5min': 'il y a 5 minutes', 'activity.20min': 'il y a 20 minutes',
     'activity.45min': 'il y a 45 minutes', 'activity.1hr': 'il y a 1 heure',
+    'cust.orders': 'Commandes', 'cust.favorites': 'Favoris',
+    'cust.title': 'Quelle est votre envie ?', 'cust.subtitle': 'Trouvez le restaurant parfait selon votre humeur.',
+    'cust.trending': 'Tendances Près de Vous',
+    'vibe.cozy': 'Cosy', 'vibe.lateNight': 'Nocturne', 'vibe.healthy': 'Sain',
+    'vibe.dateNight': 'Rendez-vous', 'vibe.party': 'Fête',
+    'food.chinese': 'Chinois', 'food.italian': 'Italien', 'food.american': 'Américain',
+    'food.japanese': 'Japonais', 'food.mexican': 'Mexicain', 'food.salad': 'Salade',
+    'food.indian': 'Indien', 'food.steak': 'Steak', 'food.cafe': 'Café', 'food.pizza': 'Pizza',
+    'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
+    'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
+    'promo.freeDelivery': 'Livraison Gratuite', 'promo.bogoPizza': '2 pour 1 Pizza', 'promo.20off': '-20%',
     'search.placeholder': 'Rechercher'
   }
 };
@@ -216,7 +282,10 @@ function applyTranslation(lang) {
 }
 
 document.querySelector('.lang-select').addEventListener('change', function () {
-  const lang = this.value;
-  localStorage.setItem('selectedLang', lang);
-  applyTranslation(lang);
+  applyTranslation(this.value);
 });
+
+// Initialize language on page load
+const savedLang = localStorage.getItem('selectedLang') || 'en';
+document.querySelector('.lang-select').value = savedLang;
+applyTranslation(savedLang);

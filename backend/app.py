@@ -179,5 +179,56 @@ def list_photos():
     return jsonify({"ok": True, "photos": photos})
 
 
+# Get store info
+@app.get("/api/store-info")
+def get_store_info():
+    info = {
+        "name": dataStore.name,
+        "description": dataStore.description,
+        "categories": ", ".join(dataStore.categories),
+        "tags": ", ".join(dataStore.tags),
+        "priceRange": dataStore.priceRange,
+        "address": f"{dataStore.location['addressLine1']}, {dataStore.location['city']}, {dataStore.location['state']} {dataStore.location['zip']}",
+        "phone": dataStore.phone
+    }
+    return jsonify({"ok": True, "info": info})
+
+
+# Update store info
+@app.post("/api/update-store-info")
+def update_store_info():
+    data = request.get_json()
+    if not data:
+        abort(400, "No data provided")
+
+    # Update info
+    dataStore.editName(data.get("name", ""))
+    dataStore.editDescription(data.get("description", ""))
+    dataStore.editCategories(data.get("categories", "").split(", "))
+    dataStore.editTags(data.get("tags", "").split(", "))
+    dataStore.editPriceRange(data.get("priceRange", ""))
+
+    # Update contact
+    dataStore.editPhone(data.get("phone", ""))
+
+    # Update location - parse address
+    address = data.get("address", "")
+    parts = [p.strip() for p in address.split(",")]
+    if len(parts) >= 4:
+        addressLine1 = parts[0]
+        city = parts[1]
+        state_zip = parts[2].split()
+        if len(state_zip) >= 2:
+            state = state_zip[0]
+            zip_code = state_zip[1]
+            dataStore.editLocation(addressLine1, city, state, zip_code)
+
+    # Save to data.json
+    dataStore.saveToJSON(str(DATA_FILE))
+    print("Updated store info and saved to data.json")
+
+    return jsonify({"ok": True})
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
