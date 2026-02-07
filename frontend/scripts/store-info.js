@@ -2,7 +2,6 @@
 const storeInfo = document.getElementById('store-info');
 const editStoreInfo = document.getElementById('edit-store-info');
 
-// Load store info on page load
 async function loadStoreInfo() {
   try {
     const res = await fetch("/api/store-info");
@@ -23,47 +22,76 @@ async function loadStoreInfo() {
   }
 }
 
-editStoreInfo.addEventListener('click', async () => {
-    console.log('Edit Store Info');
-    editStoreInfo.classList.toggle('editing');
-    const isEditing = editStoreInfo.classList.contains('editing');
+function setEditing(isEditing) {
+  editStoreInfo.classList.toggle('editing', isEditing);
+  editStoreInfo.innerText = isEditing ? 'Save' : 'Edit';
 
-    editStoreInfo.innerText = isEditing ? 'Save' : 'Edit';
+  const values = storeInfo.querySelectorAll('.info-value');
+  values.forEach(el => {
+    if (isEditing) el.setAttribute('contenteditable', 'true');
+    else el.removeAttribute('contenteditable');
+  });
 
-    const values = storeInfo.querySelectorAll('.info-value');
-    values.forEach(e => {
-        e.toggleAttribute('contenteditable');
+  if (isEditing) values[0]?.focus();
+}
+
+async function saveStoreInfo() {
+  const values = storeInfo.querySelectorAll('.info-value');
+
+  const payload = {
+    name: values[0].textContent.trim(),
+    description: values[1].textContent.trim(),
+    categories: values[2].textContent.trim(),
+    tags: values[3].textContent.trim(),
+    priceRange: values[4].textContent.trim(),
+    address: values[5].textContent.trim(),
+    phone: values[6].textContent.trim()
+  };
+
+  // basic UI lock
+  editStoreInfo.disabled = true;
+  const oldLabel = editStoreInfo.innerText;
+  editStoreInfo.innerText = "Saving...";
+
+  try {
+    const res = await fetch("/api/update-store-info", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
     });
-    if (isEditing) {
-        values[0].focus();
-    } else {
-        // Save the changes
-        const updatedInfo = {
-            name: values[0].textContent.trim(),
-            description: values[1].textContent.trim(),
-            categories: values[2].textContent.trim(),
-            tags: values[3].textContent.trim(),
-            priceRange: values[4].textContent.trim(),
-            address: values[5].textContent.trim(),
-            phone: values[6].textContent.trim()
-        };
 
-        try {
-            const res = await fetch("/api/update-store-info", {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(updatedInfo)
-            });
-            if (!res.ok) {
-                console.error("Failed to save store info");
-            } else {
-                console.log("Store info saved");
-            }
-        } catch (err) {
-            console.error("Error saving store info:", err);
-        }
+    if (!res.ok) {
+      console.error("Failed to save store info:", await res.text());
+      // revert UI back to editing state so they don’t lose their cursor unexpectedly
+      editStoreInfo.innerText = oldLabel;
+      return false;
     }
+
+    // success
+    return true;
+  } catch (err) {
+    console.error("Error saving store info:", err);
+    editStoreInfo.innerText = oldLabel;
+    return false;
+  } finally {
+    editStoreInfo.disabled = false;
+  }
+}
+
+editStoreInfo.addEventListener('click', async () => {
+  const isEditing = editStoreInfo.classList.contains('editing');
+
+  if (!isEditing) {
+    // Enter edit mode
+    setEditing(true);
+    return;
+  }
+
+  // Leaving edit mode => SAVE
+  const ok = await saveStoreInfo();
+  if (ok) {
+    setEditing(false);
+  }
 });
 
-// Load store info when script runs
 loadStoreInfo();
