@@ -82,7 +82,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 13px;
   font-weight: 500;
   color: var(--text-secondary);
-  border: 1px solid transparent;
+  border: 1px solid transparent
   border-radius: var(--radius-sm);
   transition: all var(--t-fast);
 }
