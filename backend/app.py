@@ -59,6 +59,16 @@ def business_page():
 def home_page():
     return send_from_directory(PAGES_DIR, "home.html")
 
+
+@app.get("/bella-italia")
+def bella_italia_page():
+    return send_from_directory(PAGES_DIR, "bella_italia.html")
+
+
+@app.get("/burger-joint")
+def burger_joint_page():
+    return send_from_directory(PAGES_DIR, "burger_joint.html")
+
 @app.get("/scripts/<path:filename>")
 def scripts(filename: str):
     return send_from_directory(SCRIPTS_DIR, filename)

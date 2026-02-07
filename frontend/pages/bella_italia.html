@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Italia - Plato</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/layout.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+</head>
+
+<body>
+
+  <!-- ═══════ LAYOUT WRAPPER ═══════ -->
+  <div class="layout" style="grid-template-columns: 1fr;">
+    <main class="main" style="max-width: 800px; margin: 0 auto; padding-top: 20px;">
+
+      <!-- Back Button -->
+      <a href="/customer"
+        style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text-secondary); font-weight: 500; margin-bottom: 20px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Explore
+      </a>
+
+      <!-- Header Image -->
+      <div style="height: 300px; border-radius: 12px; overflow: hidden; margin-bottom: 24px;">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&h=600&fit=crop" alt="Bella Italia"
+          style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+        <div>
+          <h1 class="page-title">Bella Italia</h1>
+          <div style="display: flex; gap: 12px; color: var(--text-secondary); font-size: 14px; margin-top: 8px;">
+            <span>Italian</span>
+            <span>•</span>
+            <span>$$$</span>
+            <span>•</span>
+            <span>15-25 min</span>
+            <span>•</span>
+            <span style="color: var(--green);">Open until 11:00 PM</span>
+          </div>
+        </div>
+        <div style="background: #f3f4f6; padding: 8px 12px; border-radius: 8px; font-weight: 700; font-size: 18px;">
+          4.6 ⭐️
+        </div>
+      </div>
+
+      <!-- Menu Sections -->
+      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 16px;">Signature Pastas</h2>
+      <div class="content-grid"
+        style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px;">
+        <!-- Full Item Card -->
+        <div
+          style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; gap: 16px;">
+          <div style="flex: 1;">
+            <h3 style="font-weight: 600; margin: 0 0 4px 0;">Carbonara</h3>
+            <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 8px 0; line-height: 1.4;">Spaghetti
+              with cured pork cheek, eggs, and Pecorino Romano.</p>
+            <span style="font-weight: 600;">$18.95</span>
+          </div>
+          <div
+            style="width: 80px; height: 80px; background: #eee; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=200&h=200&fit=crop" alt="Food"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <div
+          style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; gap: 16px;">
+          <div style="flex: 1;">
+            <h3 style="font-weight: 600; margin: 0 0 4px 0;">Truffle Risotto</h3>
+            <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 8px 0; line-height: 1.4;">Creamy
+              risotto with black truffle and parmesan.</p>
+            <span style="font-weight: 600;">$22.95</span>
+          </div>
+          <div
+            style="width: 80px; height: 80px; background: #eee; border-radius: 8px; overflow: hidden; flex-shrink: 0;">
+            <img src="https://images.unsplash.com/photo-1633337474564-1d9478ca4efc?w=200&h=200&fit=crop" alt="Food"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 16px;">Wood Fired Pizza</h2>
+      <!-- List style menu -->
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div
+          style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between;">
+          <div>
+            <h3 style="font-weight: 600; font-size: 15px; margin: 0;">Margherita</h3>
+            <p style="font-size: 13px; color: var(--text-secondary); margin: 4px 0 0 0;">San Marzano tomato sauce,
+              mozzarella di bufala, basil.</p>
+          </div>
+          <span style="font-weight: 600;">$16.00</span>
+        </div>
+        <div
+          style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; display: flex; justify-content: space-between;">
+          <div>
+            <h3 style="font-weight: 600; font-size: 15px; margin: 0;">Diavola</h3>
+            <p style="font-size: 13px; color: var(--text-secondary); margin: 4px 0 0 0;">Spicy salami, tomato sauce,
+              mozzarella.</p>
+          </div>
+          <span style="font-weight: 600;">$18.00</span>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+
+</html>
