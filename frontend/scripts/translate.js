@@ -294,7 +294,9 @@ function applyTranslation(lang) {
 }
 
 document.querySelector('.lang-select').addEventListener('change', function () {
-  applyTranslation(this.value);
+  const lang = this.value;
+  localStorage.setItem('selectedLang', lang);
+  applyTranslation(lang);
 });
 
 // Initialize language on page load
