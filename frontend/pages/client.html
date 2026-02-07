@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plato — Restaurant Dashboard</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles/layout.css">
-<link rel="stylesheet" href="../styles/theme.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plato — Restaurant Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/theme.css">
+
+    <script src="../scripts/store-info.js" defer></script>
+    <script src="../scripts/menu.js" defer></script>
 </head>
 <body>
 
@@ -251,22 +254,22 @@
         </div>
         <div class="container-body">
           <div class="channel-row">
-            <div class="channel-icon ubereats">UE</div>
+            <div class="channel-icon ubereats"></div>
             <div class="channel-info"><span class="channel-name">Uber Eats</span><span class="channel-status connected"><span class="status-dot green"></span>Synced 5m ago</span></div>
             <button class="btn btn-sm btn-teal">Manage</button>
           </div>
           <div class="channel-row">
-            <div class="channel-icon doordash">D</div>
+            <div class="channel-icon doordash"></div>
             <div class="channel-info"><span class="channel-name">DoorDash</span><span class="channel-status connected"><span class="status-dot green"></span>Synced 20m ago</span></div>
             <button class="btn btn-sm btn-teal">Manage</button>
           </div>
           <div class="channel-row">
-            <div class="channel-icon grubhub">GH</div>
+            <div class="channel-icon grubhub"></div>
             <div class="channel-info"><span class="channel-name">Grubhub</span><span class="channel-status pending"><span class="status-dot orange"></span>Sync pending</span></div>
             <button class="btn btn-sm btn-teal">Manage</button>
           </div>
           <div class="channel-row">
-            <div class="channel-icon google"><span style="color:#4285F4;font-size:16px;font-weight:700;">G</span></div>
+            <div class="channel-icon google"></div>
             <div class="channel-info"><span class="channel-name">Google Business</span><span class="channel-status connected"><span class="status-dot green"></span>Synced 30m ago</span></div>
             <button class="btn btn-sm btn-teal">Manage</button>
           </div>
@@ -281,7 +284,7 @@
             <h2>Menu</h2>
             <span class="container-badge">24 items</span>
           </div>
-          <button class="btn btn-sm btn-primary">Edit Menu</button>
+          <button class="btn btn-sm btn-primary" id="menu-edit-btn">Edit Menu</button>
         </div>
         <div class="container-body">
           <div class="menu-category">
@@ -336,8 +339,8 @@
           <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time">11:00 AM – 9:00 PM</span></div>
           <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time">11:00 AM – 10:00 PM</span></div>
           <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">11:00 AM – 11:00 PM</span></div>
-          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">10:00 AM – 11:00 PM</span></div>
-          <div class="hours-row today"><span class="hours-day">Sunday <span class="today-tag">Today</span></span><span class="hours-time">10:00 AM – 8:00 PM</span></div>
+          <div class="hours-row today"><span class="hours-day">Saturday <span class="today-tag">Today</span></span><span class="hours-time">10:00 AM – 11:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">10:00 AM – 8:00 PM</span></div>
         </div>
       </section>
 
