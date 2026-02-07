@@ -5,6 +5,3 @@ __pycache__/
 
 # IDE
 .vscode/
-
-# Uploads (if not wanted in repo)
-frontend/uploads/
