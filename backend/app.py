@@ -71,9 +71,13 @@ def images(filename: str):
 # ---------------------------
 @app.post("/api/upload-photos")
 def upload_photos():
+    print("Upload photos endpoint called")
+    print("Request files:", request.files)
     # Frontend should send multipart/form-data with field name "photos"
     files = request.files.getlist("photos")
+    print("Files list:", files)
     if not files:
+        print("No files uploaded")
         abort(400, "No files uploaded. Use form field name 'photos'.")
 
     urls = []
@@ -84,11 +88,13 @@ def upload_photos():
             continue
 
         if not allowed_file(f.filename):
+            print(f"File type not allowed: {f.filename}")
             abort(400, f"File type not allowed: {f.filename}")
 
         safe = secure_filename(f.filename)
         unique = f"{uuid.uuid4().hex}_{safe}"
         f.save(UPLOADS_DIR / unique)
+        print(f"Saved file: {unique}")
 
         url = f"/uploads/{unique}"
         urls.append(url)
@@ -97,9 +103,11 @@ def upload_photos():
         # Add to dataStore
         photo_id = f"photo_{uuid.uuid4().hex}"
         dataStore.addPhoto(photo_id, url, "uploaded", "")
+        print(f"Added photo to dataStore: {photo_id}")
 
     # Save to data.json
     dataStore.saveToJSON(str(DATA_FILE))
+    print(f"Saved dataStore to {DATA_FILE}")
 
     return jsonify({"ok": True, "urls": urls, "files": saved})
 
@@ -114,6 +122,7 @@ def uploads(filename: str):
 @app.get("/api/photos")
 def list_photos():
     photos = [{"id": pid, **pdata} for pid, pdata in dataStore.photos.items()]
+    print(f"Listing photos: {len(photos)} photos")
     return jsonify({"ok": True, "photos": photos})
 
 

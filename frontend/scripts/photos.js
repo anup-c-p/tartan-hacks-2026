@@ -42,65 +42,45 @@ uploadBtn.addEventListener('click', () => {
 
 fileInput.addEventListener('change', async () => {
   const files = fileInput.files;
+
+  // Preview the selected files
   for (let i = 0; i < files.length; i++) {
     const reader = new FileReader();
-    reader.onload = async (e) => {
-      const thumb = document.createElement('div');
-      thumb.className = 'photo-thumb';
-      thumb.style.backgroundImage = 'url(' + e.target.result + ')';
-      thumb.style.backgroundSize = 'cover';
-      thumb.style.backgroundPosition = 'center';
-      photoGrid.appendChild(thumb);
+    reader.onload = (e) => {
+      addPhotoThumb(e.target.result);
       updatePhotoCount();
-      fileInput.addEventListener('change', async () => {
-        const files = fileInput.files;
-
-        // existing preview loop...
-        for (let i = 0; i < files.length; i++) {
-          const reader = new FileReader();
-          reader.onload = (e) => {
-            const thumb = document.createElement('div');
-            thumb.className = 'photo-thumb';
-            thumb.style.backgroundImage = 'url(' + e.target.result + ')';
-            thumb.style.backgroundSize = 'cover';
-            thumb.style.backgroundPosition = 'center';
-
-            // If plusThumb doesn't exist, just append
-            photoGrid.appendChild(thumb);
-
-            updatePhotoCount();
-          };
-          reader.readAsDataURL(files[i]);
-        }
-
-        // ✅ Upload to Flask
-        const formData = new FormData();
-        for (let i = 0; i < files.length; i++) {
-          formData.append("photos", files[i]); // MUST be "photos"
-        }
-
-        try {
-          const res = await fetch("/api/upload-photos", {
-            method: "POST",
-            body: formData
-            // IMPORTANT: do NOT set Content-Type manually
-          });
-
-          if (!res.ok) {
-            console.error("Upload failed:", await res.text());
-          } else {
-            const data = await res.json();
-            console.log("Saved on server:", data.urls);
-          }
-        } catch (e) {
-          console.error("Upload error:", e);
-        }
-
-        fileInput.value = '';
-      });
     };
     reader.readAsDataURL(files[i]);
   }
+
+  // Upload the files to the server
+  const formData = new FormData();
+  for (let i = 0; i < files.length; i++) {
+    formData.append("photos", files[i]);
+  }
+
+  console.log("Files selected:", files.length);
+  console.log("FormData entries:");
+  for (let [key, value] of formData.entries()) {
+    console.log(key, value);
+  }
+
+  try {
+    const res = await fetch("/api/upload-photos", {
+      method: "POST",
+      body: formData
+    });
+
+    if (!res.ok) {
+      console.error("Upload failed:", await res.text());
+    } else {
+      const data = await res.json();
+      console.log("Saved on server:", data.urls);
+    }
+  } catch (e) {
+    console.error("Upload error:", e);
+  }
+
   fileInput.value = '';
 });
 
