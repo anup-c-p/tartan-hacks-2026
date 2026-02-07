@@ -1,11 +1,96 @@
-:root {
-    --white: #f2ebda;
-    --gray: #a99790;
-    --dark-gray: #747f7c;
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+   Change these to retheme the entire app.
+   ═══════════════════════════════════════════ */
 
-    --blue: #267365;
-    --yellow: #f2cb05;
-    --yellow-orange: #f29f05;
-    --orange: #f28705;
-    --red: #f23030;
+:root {
+  /* ── Brand Palette (saturated) ── */
+  --clr-blue:          #2b9bc8;
+  --clr-blue-light:    #4cb1d9;
+  --clr-blue-dark:     #247798;
+  --clr-blue-subtle:   rgba(33, 96, 158, 0.18);
+
+  --clr-teal:          #2a8575;
+  --clr-teal-light:    #38a898;
+  --clr-teal-dark:     #1f6b5c;
+  --clr-teal-subtle:   rgba(42,133,117,0.18);
+
+  --clr-green:          #2a853f;
+  --clr-green-light:    #38a85f;
+  --clr-green-dark:     #1f6b38;
+  --clr-green-subtle:   rgba(42, 133, 56, 0.18);
+
+  --clr-yellow:        #F2CB05;
+  --clr-yellow-light:  #f5d94a;
+  --clr-yellow-subtle: rgba(242,203,5,0.14);
+
+  --clr-orange-light:  #F2AB1B;
+  --clr-orange:        #F28705;
+  --clr-orange-subtle: rgba(242,135,5,0.15);
+
+  --clr-red:           #F23030;
+  --clr-red-light:     #f55a5a;
+  --clr-red-subtle:    rgba(242,48,48,0.13);
+
+  /* ── Surfaces (brighter dark) ── */
+  --bg-body:           #161619;
+  --bg-topbar:         #1c1c20;
+  --bg-sidebar:        #1a1a1e;
+  --bg-card:           #212126;
+  --bg-card-hover:     #28282e;
+  --bg-input:          #262630;
+  --bg-elevated:       #2c2c33;
+
+  /* ── Text ── */
+  --text-primary:      #f0f0f2;
+  --text-secondary:    #a8a8b3;
+  --text-muted:        #6b6b78;
+  --text-on-accent:    #ffffff;
+
+  /* ── Borders ── */
+  --border:            #30303a;
+  --border-light:      #3e3e4a;
+  --border-focus:      var(--clr-teal);
+
+  /* ── Status ── */
+  --clr-success:       #34d874;
+  --clr-success-subtle:rgba(52,216,116,0.14);
+  --clr-warning:       var(--clr-orange);
+
+  /* ── Radii ── */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius:     10px;
+  --radius-lg:  14px;
+  --radius-xl:  20px;
+  --radius-full:9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.35);
+  --shadow-md:  0 4px 18px rgba(0,0,0,0.4);
+  --shadow-glow-teal: 0 0 24px rgba(42,133,117,0.25);
+  --shadow-glow-orange: 0 0 16px rgba(242,135,5,0.15);
+  --shadow-glow-red: 0 0 16px rgba(242,48,48,0.15);
+
+  /* ── Spacing ── */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 20px; --sp-6: 24px;
+  --sp-8: 32px; --sp-10: 40px;
+
+  /* ── Sidebar / Topbar Sizes ── */
+  --topbar-h:   56px;
+  --sidebar-w:  250px;
+
+  /* ── Transitions ── */
+  --ease: cubic-bezier(0.25,0.46,0.45,0.94);
+  --t-fast: 0.15s var(--ease);
+  --t-med:  0.25s var(--ease);
 }
+
+.clr-blue { --color: var(--clr-blue); --color-subtle: var(--clr-teal-blue); }
+.clr-teal { --color: var(--clr-teal); --color-subtle: var(--clr-teal-subtle); }
+.clr-green { --color: var(--clr-green); --color-subtle: var(--clr-green-subtle); }
+.clr-orange { --color: var(--clr-orange); --color-subtle: var(--clr-orange-subtle); }
+.clr-yellow { --color: var(--clr-yellow); --color-subtle: var(--clr-yellow-subtle); }
+.clr-red { --color: var(--clr-red); --color-subtle: var(--clr-red-subtle); }
+.clr-gray { --color: var(--border); --color-subtle: var(--border-light); }
