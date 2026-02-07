@@ -389,9 +389,9 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 13px;
   font-weight: 500;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-secondary);
+  border: 1px solid var(--color, --border);
+  background: var(--color, --bg-card);
+  color: var(--text-on-accent, --text-secondary);
   transition: all var(--t-fast);
 }
 .btn:hover {
@@ -405,7 +405,7 @@ button { cursor: pointer; font-family: inherit; }
   font-size: 12px;
 }
 
-.btn-primary {
+/* .btn-primary {
   background: var(--clr-teal);
   color: var(--text-on-accent);
   border-color: var(--clr-teal);
@@ -437,7 +437,7 @@ button { cursor: pointer; font-family: inherit; }
   background: var(--clr-teal-light);
   border-color: var(--clr-teal-light);
   color: var(--text-on-accent);
-}
+} */
 
 
 /* ═══════════════════════════════════════════
@@ -558,8 +558,8 @@ button { cursor: pointer; font-family: inherit; }
   font-weight: 600;
   padding: 2px 8px;
   border-radius: var(--radius-full);
-  background: var(--clr-teal-subtle);
-  color: var(--clr-teal-light);
+  background: var(--color-subtle, --clr-teal-subtle);
+  color: var(--color-light, --clr-teal-light);
   margin-left: var(--sp-2);
 }
 

@@ -7,7 +7,7 @@
         "description": "A casual burger joint serving fresh homemade burgers",
         "type": "restaurant",
         "categories": ["Burgers", "Fast Casual", "American"],
-        "tags": ["family-friendly", "late-night", "takeout"],
+        "tags": ["Family Friendly", "Late Night", "Takeout"],
         "priceRange": "$$"
     },
 
