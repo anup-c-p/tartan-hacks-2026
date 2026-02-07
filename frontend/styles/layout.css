@@ -807,3 +807,7 @@ button { cursor: pointer; font-family: inherit; }
 .activity-text { font-size: 13px; color: var(--text-secondary); }
 .activity-text strong { color: var(--text-primary); font-weight: 600; }
 .activity-time { font-size: 11px; color: var(--text-muted); }
+
+.restaurant-card {
+    overflow: hidden;
+}
