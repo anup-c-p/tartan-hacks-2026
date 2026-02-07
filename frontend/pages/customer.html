@@ -464,6 +464,43 @@
                 </a>
             </div>
 
+<<<<<<< HEAD
+=======
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const vibeCards = document.querySelectorAll('.vibe-card');
+                    const restaurantLinks = document.querySelectorAll('.restaurant-link');
+
+                    vibeCards.forEach(card => {
+                        card.addEventListener('click', () => {
+                            // Toggle active class
+                            if (card.classList.contains('active')) {
+                                card.classList.remove('active');
+                                // Show all
+                                restaurantLinks.forEach(link => link.classList.remove('hidden'));
+                            } else {
+                                // Activate new vibe
+                                vibeCards.forEach(c => c.classList.remove('active'));
+                                card.classList.add('active');
+
+                                const filter = card.dataset.filter;
+
+                                // Filter logic
+                                restaurantLinks.forEach(link => {
+                                    const tags = link.dataset.tags.split(' ');
+                                    if (tags.includes(filter)) {
+                                        link.classList.remove('hidden');
+                                    } else {
+                                        link.classList.add('hidden');
+                                    }
+                                });
+                            }
+                        });
+                    });
+                });
+            </script>
+
+>>>>>>> bd64a96fdf56decdd05a3a36806a18a37d6ad767
         </main>
     </div>
 
