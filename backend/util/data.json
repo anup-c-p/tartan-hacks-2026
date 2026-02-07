@@ -27,10 +27,10 @@
     "zip": "62701",
     "country": "US",
     "coordinates": {
-      "lat": 39.7817,
-      "lng": -89.6501
+      "lat": null,
+      "lng": null
     },
-    "directionsNote": "Parking in rear"
+    "directionsNote": ""
   },
   "menu": {
     "currency": "USD",
