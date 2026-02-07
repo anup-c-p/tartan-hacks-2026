@@ -1,0 +1,110 @@
+{
+    "storeId": "store_123",
+    "ownerId": "user_456",
+    
+    "info": {
+        "name": "Joe's Burgers",
+        "description": "A casual burger joint serving fresh homemade burgers",
+        "type": "restaurant",
+        "categories": ["Burgers", "Fast Casual", "American"],
+        "tags": ["family-friendly", "late-night", "takeout"],
+        "priceRange": "$$"
+    },
+
+    "contact": {
+        "phone": "+1-555-123-4567",
+        "email": "contact@joesburgers.com",
+        "website": "https://joesburgers.com",
+        "socials": {
+            "instagram": "https://instagram.com/joesburgers",
+            "tiktok": "https://tiktok.com/@joesburgers"
+        }
+    },
+
+    "location": {
+        "addressLine1": "123 Main St",
+        "addressLine2": "",
+        "city": "Springfield",
+        "state": "IL",
+        "zip": "62701",
+        "country": "US",
+        "coordinates": {
+            "lat": 39.7817,
+            "lng": -89.6501
+        },
+        "directionsNote": "Parking behind building"
+    },
+
+    "menu": {
+        "currency": "USD",
+        "categories": [
+            {
+                "id": "cat_burgers",
+                "name": "Burgers",
+                "items": [
+                    {
+                        "id": "item_classic",
+                        "name": "Classic Burger",
+                        "description": "Beef patty, lettuce, tomato, cheese",
+                        "price": 8.99,
+                        "image": "photo_1"
+                    },
+                    {
+                        "id": "item_bacon",
+                        "name": "Bacon Burger",
+                        "description": "Beef patty, bacon, lettuce, tomato, cheese",
+                        "price": 9.99,
+                        "image": "photo_2"
+                    }
+                ]
+            }
+        ]
+    },
+
+    "photos": [
+        {
+            "id": "photo_1",
+            "url": "https://cdn.app.com/photos/burger1.jpg",
+            "type": "menu",
+            "caption": "Classic burger"
+        },
+        {
+            "id": "photo_2",
+            "url": "https://cdn.app.com/photos/burger1.jpg",
+            "type": "menu",
+            "caption": "Bacon burger"
+        },
+        {
+            "id": "photo_3",
+            "url": "https://cdn.app.com/photos/storefront.jpg",
+            "type": "storefront",
+            "caption": "Front entrance"
+        }
+    ],
+
+    "hours": {
+        "timezone": "America/Chicago",
+        
+        "regular": {
+            "monday":    {"open": "10:00", "close": "22:00"},
+            "tuesday":   {"open": "10:00", "close": "22:00"},
+            "wednesday": {"open": "10:00", "close": "22:00"},
+            "thursday":  {"open": "10:00", "close": "23:00"},
+            "friday":    {"open": "10:00", "close": "01:00"},
+            "saturday":  {"open": "11:00", "close": "01:00"},
+            "sunday":    {"closed": true}
+        },
+        "special": [
+            {
+                "date": "2026-12-25",
+                "closed": true,
+                "note": "Christmas"
+            },
+            {
+                "date": "2026-07-04",
+                "open": "12:00",
+                "close": "20:00"
+            }
+        ]
+    }
+}
