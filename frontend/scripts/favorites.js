@@ -105,7 +105,7 @@ const restaurants = [
 ];
 
 function getFavorites() {
-  const favs = localStorage.getItem('plato_favorites');
+  const favs = localStorage.getItem('FAI_favorites');
   return favs ? JSON.parse(favs) : [];
 }
 
@@ -122,7 +122,7 @@ function toggleFavorite(event, id) {
     favs.push(id);
   }
 
-  localStorage.setItem('plato_favorites', JSON.stringify(favs));
+  localStorage.setItem('FAI_favorites', JSON.stringify(favs));
   updateHeartIcons();
 
   // If on favorites page, re-render
