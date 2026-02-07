@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/theme.css">
 
     <script src="../scripts/translate.js" defer></script>
+    <script src="../scripts/favorites.js" defer></script>
 </head>
 
 <body>
@@ -338,7 +339,11 @@
                 style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
                 <!-- Szechuan Palace -->
                 <a href="/szechuan" style="text-decoration: none;" class="restaurant-link" data-tags="late-night cozy">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="szechuan" onclick="toggleFavorite(event, 'szechuan')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
                         <div class="restaurant-info">
@@ -361,7 +366,11 @@
                 <!-- Bella Italia -->
                 <a href="/bella-italia" style="text-decoration: none;" class="restaurant-link"
                     data-tags="date-night cozy">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="bella-italia" onclick="toggleFavorite(event, 'bella-italia')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
                         <div class="restaurant-info">
@@ -384,7 +393,11 @@
                 <!-- Burger Joint -->
                 <a href="/burger-joint" style="text-decoration: none;" class="restaurant-link"
                     data-tags="late-night party">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="burger-joint" onclick="toggleFavorite(event, 'burger-joint')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
                         <div class="restaurant-info">
@@ -407,7 +420,11 @@
                 <!-- Sushi Zen -->
                 <a href="/sushi-zen" style="text-decoration: none;" class="restaurant-link"
                     data-tags="healthy date-night">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="sushi-zen" onclick="toggleFavorite(event, 'sushi-zen')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Sushi Zen">
                         <div class="restaurant-info">
@@ -426,7 +443,11 @@
                 <!-- Taco Fiesta -->
                 <a href="/taco-fiesta" style="text-decoration: none;" class="restaurant-link"
                     data-tags="party late-night">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="taco-fiesta" onclick="toggleFavorite(event, 'taco-fiesta')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Taco Fiesta">
                         <div class="restaurant-info">
@@ -444,7 +465,11 @@
 
                 <!-- Green Leaf -->
                 <a href="/green-leaf" style="text-decoration: none;" class="restaurant-link" data-tags="healthy">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="green-leaf" onclick="toggleFavorite(event, 'green-leaf')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Green Leaf">
                         <div class="restaurant-info">
@@ -462,7 +487,11 @@
 
                 <!-- Curry House -->
                 <a href="/curry-house" style="text-decoration: none;" class="restaurant-link" data-tags="cozy">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="curry-house" onclick="toggleFavorite(event, 'curry-house')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Curry House">
                         <div class="restaurant-info">
@@ -480,7 +509,11 @@
 
                 <!-- The Steakhouse -->
                 <a href="/steakhouse" style="text-decoration: none;" class="restaurant-link" data-tags="date-night">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="steakhouse" onclick="toggleFavorite(event, 'steakhouse')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="The Steakhouse">
                         <div class="restaurant-info">
@@ -498,7 +531,11 @@
 
                 <!-- Morning Brew -->
                 <a href="/morning-brew" style="text-decoration: none;" class="restaurant-link" data-tags="cozy healthy">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="morning-brew" onclick="toggleFavorite(event, 'morning-brew')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Morning Brew">
                         <div class="restaurant-info">
@@ -517,7 +554,11 @@
                 <!-- Pizza Slice -->
                 <a href="/pizza-slice" style="text-decoration: none;" class="restaurant-link"
                     data-tags="late-night party">
-                    <div class="restaurant-card">
+                    <div class="restaurant-card" style="position: relative;">
+                        <button class="heart-btn" data-id="pizza-slice" onclick="toggleFavorite(event, 'pizza-slice')"
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+                            🤍
+                        </button>
                         <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Pizza Slice">
                         <div class="restaurant-info">
