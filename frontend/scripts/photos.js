@@ -33,7 +33,7 @@ function addPhotoThumb(url) {
   thumb.style.backgroundImage = `url(${url})`;
   thumb.style.backgroundSize = 'cover';
   thumb.style.backgroundPosition = 'center';
-  photoGrid.insertBefore(thumb, plusThumb);
+  photoGrid.appendChild(thumb);
 }
 
 uploadBtn.addEventListener('click', () => {
@@ -85,7 +85,7 @@ fileInput.addEventListener('change', async () => {
 });
 
 function updatePhotoCount() {
-  const count = photoGrid.querySelectorAll('.photo-thumb:not(.plus)').length;
+  const count = photoGrid.querySelectorAll('.photo-thumb').length;
   photoOverview.innerText = count;
   photoBadge.innerText = count + ' uploaded';
 }
