@@ -49,7 +49,15 @@ def client_page():
 @app.get("/customer")
 def customer_page():
     return send_from_directory(PAGES_DIR, "customer.html")
+    
+@app.get("/business")
+def business_page():
+    return send_from_directory(PAGES_DIR, "business.html")
 
+
+@app.get("/home")
+def home_page():
+    return send_from_directory(PAGES_DIR, "home.html")
 
 @app.get("/scripts/<path:filename>")
 def scripts(filename: str):
