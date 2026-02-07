@@ -1,2 +1,10 @@
-.vscode/
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+
+# Uploads (if not wanted in repo)
+frontend/uploads/

@@ -61,26 +61,14 @@
   },
   "photos": [
     {
-      "id": "photo_1",
-      "url": "https://cdn.app.com/photos/burger1.jpg",
-      "type": "menu",
-      "caption": "Classic burger"
-    },
-    {
-      "id": "photo_2",
-      "url": "https://cdn.app.com/photos/burger1.jpg",
-      "type": "menu",
-      "caption": "Bacon burger"
-    },
-    {
-      "id": "photo_3",
-      "url": "https://cdn.app.com/photos/storefront.jpg",
-      "type": "storefront",
-      "caption": "Front entrance"
-    },
-    {
       "id": "photo_54f6fd832cf640609179f57152af1a1f",
       "url": "/uploads/5444ca1a5d204cc8ba0ff30bef2d172c_IMG_6579.JPG",
+      "type": "uploaded",
+      "caption": ""
+    },
+    {
+      "id": "photo_12de7a40b7bd40e4994bd1568cad5800",
+      "url": "/uploads/8bd58d097f6d411bb6914324c07bdac7_IMG_5585.JPG",
       "type": "uploaded",
       "caption": ""
     }
