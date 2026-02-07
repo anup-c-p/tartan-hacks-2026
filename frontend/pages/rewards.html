@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orders - Plato</title>
+  <title>Rewards - Plato</title>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../styles/layout.css">
   <link rel="stylesheet" href="../styles/theme.css">
+  <script src="../scripts/favorites.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,6 @@
   <!-- ═══════ TOP BAR ═══════ -->
   <header class="topbar">
     <div class="topbar-left">
-      <!-- Logo -->
       <a href="/" class="logo">
         <div class="logo-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -31,10 +31,8 @@
         </div>
         <span class="logo-text">Plato</span>
       </a>
-
-      <!-- Main Nav Tabs -->
       <nav class="nav-tabs">
-        <a href="/home" class="nav-tab">
+        <a href="/home" class="nav-tab active">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -79,9 +77,7 @@
         </a>
       </nav>
     </div>
-
     <div class="topbar-right">
-      <!-- Search -->
       <div class="search-bar">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -91,8 +87,6 @@
         <input type="text" placeholder="Search">
         <kbd class="search-kbd">⌘K</kbd>
       </div>
-
-      <!-- Translation -->
       <div class="lang-select-wrap">
         <select class="lang-select">
           <option value="en">🌐 English</option>
@@ -103,8 +97,6 @@
           <option value="fr">🇫🇷 Français</option>
         </select>
       </div>
-
-      <!-- Notification Bell -->
       <button class="topbar-icon-btn" title="Notifications">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -113,8 +105,6 @@
         </svg>
         <span class="notification-dot"></span>
       </button>
-
-      <!-- Help -->
       <button class="topbar-icon-btn" title="Help">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -123,8 +113,6 @@
           <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       </button>
-
-      <!-- Profile -->
       <button class="profile-btn">
         <div class="profile-avatar">N</div>
         <span class="profile-name">Nolan</span>
@@ -156,7 +144,7 @@
           </svg>
           Explore
         </a>
-        <a href="/rewards" class="sidebar-link">
+        <a href="/rewards" class="sidebar-link active">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
@@ -171,7 +159,7 @@
           </svg>
           Messages
         </a>
-        <a href="/orders" class="sidebar-link active">
+        <a href="/orders" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -204,12 +192,15 @@
     </aside>
 
     <main class="main" style="max-width: 800px; padding-top: 40px;">
-      <h1 class="page-title">Your Orders</h1>
-      <p class="page-subtitle">Track your past and current orders here.</p>
+      <h1 class="page-title">Your Rewards</h1>
+      <p class="page-subtitle">Track your points and redeem tasty rewards.</p>
 
-      <div style="text-align: center; margin-top: 60px; color: var(--text-secondary);">
-        <p>No orders yet!</p>
-        <a href="/customer" class="btn btn-primary" style="margin-top: 16px; display: inline-block;">Explore Food</a>
+      <div style="background: white; padding: 24px; border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="margin-bottom: 16px;">Gold Tier</h3>
+        <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden; margin-bottom: 8px;">
+          <div style="height: 100%; width: 70%; background: var(--primary);"></div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-secondary);">3,500 / 5,000 points until Platinum</p>
       </div>
 
     </main>

@@ -4,20 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orders - Plato</title>
+  <title>Top Rated - Plato</title>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../styles/layout.css">
   <link rel="stylesheet" href="../styles/theme.css">
+  <script src="../scripts/translate.js" defer></script>
+  <script src="../scripts/favorites.js" defer></script>
 </head>
 
 <body>
 
   <!-- ═══════ TOP BAR ═══════ -->
   <header class="topbar">
+    <!-- (Same topbar code for brevity, assumed consistent) -->
     <div class="topbar-left">
-      <!-- Logo -->
       <a href="/" class="logo">
         <div class="logo-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -31,8 +33,6 @@
         </div>
         <span class="logo-text">Plato</span>
       </a>
-
-      <!-- Main Nav Tabs -->
       <nav class="nav-tabs">
         <a href="/home" class="nav-tab">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -42,7 +42,7 @@
           </svg>
           Home
         </a>
-        <a href="/customer" class="nav-tab">
+        <a href="/customer" class="nav-tab active">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10" />
@@ -79,9 +79,7 @@
         </a>
       </nav>
     </div>
-
     <div class="topbar-right">
-      <!-- Search -->
       <div class="search-bar">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -91,8 +89,6 @@
         <input type="text" placeholder="Search">
         <kbd class="search-kbd">⌘K</kbd>
       </div>
-
-      <!-- Translation -->
       <div class="lang-select-wrap">
         <select class="lang-select">
           <option value="en">🌐 English</option>
@@ -103,8 +99,6 @@
           <option value="fr">🇫🇷 Français</option>
         </select>
       </div>
-
-      <!-- Notification Bell -->
       <button class="topbar-icon-btn" title="Notifications">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -113,8 +107,6 @@
         </svg>
         <span class="notification-dot"></span>
       </button>
-
-      <!-- Help -->
       <button class="topbar-icon-btn" title="Help">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
@@ -123,8 +115,6 @@
           <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       </button>
-
-      <!-- Profile -->
       <button class="profile-btn">
         <div class="profile-avatar">N</div>
         <span class="profile-name">Nolan</span>
@@ -138,6 +128,8 @@
 
   <!-- ═══════ LAYOUT WRAPPER ═══════ -->
   <div class="layout">
+
+    <!-- ═══════ SIDEBAR (Consistent with Customer) ═══════ -->
     <aside class="sidebar">
       <nav class="sidebar-nav">
         <a href="/home" class="sidebar-link">
@@ -146,7 +138,7 @@
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
-          Home
+          <span data-i18n="nav.home">Home</span>
         </a>
         <a href="/customer" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -154,24 +146,35 @@
             <circle cx="12" cy="12" r="10" />
             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
           </svg>
-          Explore
+          <span data-i18n="nav.explore">Explore</span>
         </a>
-        <a href="/rewards" class="sidebar-link">
+        <div class="sidebar-section-label" style="margin-top: 20px;">Discover</div>
+        <a href="/trending" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
-            </path>
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
           </svg>
-          Rewards
+          <span data-i18n="nav.trending">Trending</span>
         </a>
-        <a href="/messages" class="sidebar-link">
+        <a href="/top-rated" class="sidebar-link active">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+            </polygon>
           </svg>
-          Messages
+          <span data-i18n="nav.topRated">Top Rated</span>
         </a>
-        <a href="/orders" class="sidebar-link active">
+        <a href="/new-arrivals" class="sidebar-link">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+          <span data-i18n="nav.newArrivals">New Arrivals</span>
+        </a>
+        <a href="/orders" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -180,7 +183,7 @@
             <line x1="16" y1="17" x2="8" y2="17" />
             <polyline points="10 9 9 9 8 9" />
           </svg>
-          Orders
+          <span data-i18n="cust.orders">Orders</span>
         </a>
         <a href="/favorites" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -188,28 +191,90 @@
             <path
               d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
           </svg>
-          Favorites
+          <span data-i18n="cust.favorites">Favorites</span>
         </a>
-        <div class="sidebar-section-label">Settings</div>
+        <div class="sidebar-section-label" data-i18n="sidebar.settings">Settings</div>
         <a href="/settings" class="sidebar-link">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="3" />
             <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83-2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
           </svg>
-          Settings
+          <span data-i18n="sidebar.settings">Settings</span>
         </a>
       </nav>
     </aside>
 
     <main class="main" style="max-width: 800px; padding-top: 40px;">
-      <h1 class="page-title">Your Orders</h1>
-      <p class="page-subtitle">Track your past and current orders here.</p>
+      <h1 class="page-title">Top Rated ⭐</h1>
+      <p class="page-subtitle">The highest rated spots in town.</p>
 
-      <div style="text-align: center; margin-top: 60px; color: var(--text-secondary);">
-        <p>No orders yet!</p>
-        <a href="/customer" class="btn btn-primary" style="margin-top: 16px; display: inline-block;">Explore Food</a>
+      <div class="content-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+        <a href="/szechuan" style="text-decoration: none;" class="restaurant-link">
+          <div class="restaurant-card" style="position: relative;">
+            <button class="heart-btn" data-id="szechuan" onclick="toggleFavorite(event, 'szechuan')"
+              style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+              🤍
+            </button>
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop"
+              class="restaurant-img" alt="Food">
+            <div class="restaurant-info">
+              <div style="display:flex; justify-content:space-between; align-items:start;">
+                <div class="restaurant-name">Szechuan Palace</div>
+                <div class="rating-badge">4.8</div>
+              </div>
+              <div class="restaurant-meta">
+                <span data-i18n="food.chinese">Chinese</span> • <span>$$</span> • <span data-i18n="time.3045">30-45
+                  min</span>
+              </div>
+              <div
+                style="margin-top: 10px; font-size: 12px; color: var(--accent); background: var(--accent-light); display: inline-block; padding: 4px 8px; border-radius: 4px;">
+                <span data-i18n="promo.freeDelivery">Free Delivery</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="/sushi-zen" style="text-decoration: none;" class="restaurant-link">
+          <div class="restaurant-card" style="position: relative;">
+            <button class="heart-btn" data-id="sushi-zen" onclick="toggleFavorite(event, 'sushi-zen')"
+              style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+              🤍
+            </button>
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop"
+              class="restaurant-img" alt="Sushi Zen">
+            <div class="restaurant-info">
+              <div style="display:flex; justify-content:space-between; align-items:start;">
+                <div class="restaurant-name">Sushi Zen</div>
+                <div class="rating-badge">4.9</div>
+              </div>
+              <div class="restaurant-meta">
+                <span data-i18n="food.japanese">Japanese</span> • <span>$$$</span> • <span data-i18n="time.2030">20-30
+                  min</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="/steakhouse" style="text-decoration: none;" class="restaurant-link">
+          <div class="restaurant-card" style="position: relative;">
+            <button class="heart-btn" data-id="steakhouse" onclick="toggleFavorite(event, 'steakhouse')"
+              style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10;">
+              🤍
+            </button>
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop"
+              class="restaurant-img" alt="The Steakhouse">
+            <div class="restaurant-info">
+              <div style="display:flex; justify-content:space-between; align-items:start;">
+                <div class="restaurant-name">The Steakhouse</div>
+                <div class="rating-badge">4.9</div>
+              </div>
+              <div class="restaurant-meta">
+                <span data-i18n="food.steak">Steak</span> • <span>$$$$</span> • <span data-i18n="time.4560">45-60
+                  min</span>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
 
     </main>

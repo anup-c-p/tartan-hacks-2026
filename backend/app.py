@@ -70,9 +70,34 @@ def favorites_page():
     return send_from_directory(PAGES_DIR, "favorites.html")
 
 
-@app.get("/settings")
+@app.get('/settings')
 def settings_page():
-    return send_from_directory(PAGES_DIR, "settings.html")
+    return send_from_directory(PAGES_DIR, 'settings.html')
+
+
+@app.get('/rewards')
+def rewards_page():
+    return send_from_directory(PAGES_DIR, 'rewards.html')
+
+
+@app.get('/messages')
+def messages_page():
+    return send_from_directory(PAGES_DIR, 'messages.html')
+
+
+@app.get('/trending')
+def trending_page():
+    return send_from_directory(PAGES_DIR, 'trending.html')
+
+
+@app.get('/top-rated')
+def top_rated_page():
+    return send_from_directory(PAGES_DIR, 'top-rated.html')
+
+
+@app.get('/new-arrivals')
+def new_arrivals_page():
+    return send_from_directory(PAGES_DIR, 'new-arrivals.html')
 
 
 @app.get("/bella-italia")
