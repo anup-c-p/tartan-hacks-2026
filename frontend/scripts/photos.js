@@ -20,7 +20,7 @@ fileInput.addEventListener('change', () => {
   const files = fileInput.files;
   for (let i = 0; i < files.length; i++) {
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       const thumb = document.createElement('div');
       thumb.className = 'photo-thumb';
       thumb.style.backgroundImage = 'url(' + e.target.result + ')';
@@ -28,7 +28,10 @@ fileInput.addEventListener('change', () => {
       thumb.style.backgroundPosition = 'center';
       photoGrid.insertBefore(thumb, plusThumb);
       updatePhotoCount();
-      // TODO: send file to flask backend
+      const form = new FormData();
+      for (const f of fileInput.files) form.append("photos", f);
+      const res = await fetch("/api/upload-photos", { method: "POST", body: form });
+      const data = await res.json(); // data.urls are now fetchable (served by Flask)
     };
     reader.readAsDataURL(files[i]);
   }
