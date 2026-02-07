@@ -35,12 +35,12 @@ def root():
     return redirect(url_for("client_page"))
 
 
-@app.get("/client.html")
+@app.get("/client")
 def client_page():
     return send_from_directory(PAGES_DIR, "client.html")
 
 
-@app.get("/customer.html")
+@app.get("/customer")
 def customer_page():
     return send_from_directory(PAGES_DIR, "customer.html")
 
