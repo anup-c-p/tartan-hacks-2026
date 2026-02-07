@@ -318,6 +318,7 @@ button { cursor: pointer; font-family: inherit; }
   border-radius: var(--radius-full);
   background: var(--bg-elevated);
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 .sidebar-badge.accent {
   background: var(--clr-orange-subtle);
