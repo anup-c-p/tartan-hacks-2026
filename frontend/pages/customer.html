@@ -5,95 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../styles/layout.css">
     <link rel="stylesheet" href="../styles/theme.css">
-    <style>
-        /* Specific overrides for customer view within the dashboard layout */
-        .vibe-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .vibe-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
-            background: var(--bg-hover);
-        }
-
-        .vibe-emoji {
-            font-size: 32px;
-        }
-
-        .vibe-label {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .restaurant-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .restaurant-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
-        }
-
-        .restaurant-img {
-            height: 140px;
-            width: 100%;
-            object-fit: cover;
-            background-color: #eee;
-        }
-
-        .restaurant-info {
-            padding: 16px;
-        }
-
-        .restaurant-name {
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 4px;
-            color: var(--text-primary);
-        }
-
-        .restaurant-meta {
-            font-size: 13px;
-            color: var(--text-secondary);
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .rating-badge {
-            background-color: #f3f4f6;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 12px;
-            color: var(--text-primary);
-        }
-    </style>
+    <!-- Client-side scripts removed for customer view -->
 </head>
 
 <body>
 
-    <!-- ═══════ TOP BAR ═══════ -->
+    <!-- ═══════ TOP BAR (Consistent with Client) ═══════ -->
     <header class="topbar">
         <div class="topbar-left">
             <!-- Logo -->
@@ -114,81 +36,119 @@
             <!-- Main Nav Tabs -->
             <nav class="nav-tabs">
                 <a href="#" class="nav-tab">
-                    <!-- <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> -->
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
                     Home
                 </a>
-                <a href="customer.html" class="nav-tab active">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></svg>
+                <a href="/customer" class="nav-tab active">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                    </svg>
                     Explore
                 </a>
-                <a href="client.html" class="nav-tab">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                <a href="/client" class="nav-tab">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                    </svg>
                     Dashboard
                 </a>
                 <a href="#" class="nav-tab">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                    </svg>
                     Listings
                 </a>
                 <a href="#" class="nav-tab">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
                     Marketing
                 </a>
-                </nav>
+            </nav>
         </div>
 
         <div class="topbar-right">
-        <!-- Search -->
-        <div class="search-bar">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" placeholder="Search">
-        <kbd class="search-kbd">⌘K</kbd>
+            <!-- Search -->
+            <div class="search-bar">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input type="text" placeholder="Search menus, listings, settings…">
+                <kbd class="search-kbd">⌘K</kbd>
+            </div>
+
+            <!-- Translation -->
+            <div class="lang-select-wrap">
+                <select class="lang-select">
+                    <option value="en">🌐 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="fr">🇫🇷 Français</option>
+                </select>
+            </div>
+
+            <!-- Notification Bell -->
+            <button class="topbar-icon-btn" title="Notifications">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span class="notification-dot"></span>
+            </button>
+
+            <!-- Help -->
+            <button class="topbar-icon-btn" title="Help">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+            </button>
+
+            <!-- Profile -->
+            <button class="profile-btn">
+                <div class="profile-avatar">N</div>
+                <span class="profile-name">Nolan</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </button>
         </div>
-
-        <!-- Translation -->
-        <div class="lang-select-wrap">
-        <select class="lang-select">
-            <option value="en">🌐 English</option>
-            <option value="es">🇪🇸 Español</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ko">🇰🇷 한국어</option>
-            <option value="ja">🇯🇵 日本語</option>
-            <option value="fr">🇫🇷 Français</option>
-        </select>
-        </div>
-
-        <!-- Notification Bell -->
-        <button class="topbar-icon-btn" title="Notifications">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        <span class="notification-dot"></span>
-        </button>
-
-        <!-- Help -->
-        <button class="topbar-icon-btn" title="Help">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </button>
-
-        <!-- Profile -->
-        <button class="profile-btn">
-        <div class="profile-avatar">N</div>
-        <span class="profile-name">Nolan</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-    </div>
     </header>
 
 
     <!-- ═══════ LAYOUT WRAPPER ═══════ -->
     <div class="layout">
 
-        <!-- ═══════ SIDEBAR ═══════ -->
+        <!-- ═══════ SIDEBAR (Consistent with Client) ═══════ -->
         <aside class="sidebar">
-            <!-- Location Selector -->
+            <!-- Store Selector -->
             <div class="store-selector">
-                <div class="store-selector-icon">📍</div>
+                <div class="store-selector-icon">😛</div>
                 <div class="store-selector-info">
-                    <span class="store-selector-name">Home</span>
-                    <span class="store-selector-status">123 Main St</span>
+                    <span class="store-selector-name">Joe's Burgers</span>
+                    <span class="store-selector-status"><span class="status-dot green"></span>Open</span>
                 </div>
                 <svg class="store-selector-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -198,22 +158,43 @@
 
             <!-- Sidebar Nav -->
             <nav class="sidebar-nav">
-                <div class="sidebar-section-label">Discover</div>
-                <a href="#" class="sidebar-link active">
+                <div class="sidebar-section-label">Management</div>
+                <!-- Removed active class from Overview -->
+                <a href="#" class="sidebar-link">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
                     </svg>
-                    Explore
+                    Overview
                 </a>
                 <a href="#" class="sidebar-link">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
                     </svg>
-                    Favorites
+                    Store Info
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <line x1="3" y1="9" x2="21" y2="9" />
+                        <line x1="9" y1="21" x2="9" y2="9" />
+                    </svg>
+                    Menu
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    Photos
                 </a>
                 <a href="#" class="sidebar-link">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -221,40 +202,82 @@
                         <circle cx="12" cy="12" r="10" />
                         <polyline points="12 6 12 12 16 14" />
                     </svg>
-                    Your Orders
+                    Hours
                 </a>
 
-                <div class="sidebar-section-label">Account</div>
+                <div class="sidebar-section-label">Distribution</div>
                 <a href="#" class="sidebar-link">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-                        <line x1="1" y1="10" x2="23" y2="10" />
+                        <circle cx="18" cy="5" r="3" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
                     </svg>
-                    Wallet
+                    Connected Channels
+                    <span class="sidebar-badge">4</span>
                 </a>
                 <a href="#" class="sidebar-link">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                        <circle cx="12" cy="7" r="4" />
+                        <polyline points="23 4 23 10 17 10" />
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
                     </svg>
-                    Profile
+                    Sync Status
+                    <span class="sidebar-badge accent">1 pending</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Google Listing
+                </a>
+
+                <div class="sidebar-section-label">Settings</div>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    Team &amp; Permissions
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    Billing &amp; Plan
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                    Preferences
                 </a>
             </nav>
 
-    <!-- Sidebar Footer -->
-    <div class="sidebar-footer">
-      <div class="sync-status-bar">
-        <div class="sync-pulse"></div>
-        <span>Waiting on 1 sync</span>
-        <span class="sync-time">2m ago</span>
-      </div>
-    </div>
-  </aside>
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div class="sync-status-bar">
+                    <div class="sync-pulse"></div>
+                    <span>Waiting on 1 sync</span>
+                    <span class="sync-time">2m ago</span>
+                </div>
+            </div>
+        </aside>
 
 
-        <!-- ═══════ MAIN CONTENT ═══════ -->
+        <!-- ═══════ MAIN CONTENT (Customer Specific) ═══════ -->
         <main class="main">
 
             <!-- Page Title Row -->
@@ -266,6 +289,36 @@
             </div>
 
             <!-- Vibe Tags Grid -->
+            <style>
+                .vibe-card {
+                    background: var(--card-bg);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    padding: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .vibe-card:hover {
+                    transform: translateY(-2px);
+                    border-color: var(--accent);
+                    background: var(--bg-hover);
+                }
+
+                .vibe-emoji {
+                    font-size: 32px;
+                }
+
+                .vibe-label {
+                    font-weight: 600;
+                    color: var(--text-primary);
+                }
+            </style>
             <div class="content-grid"
                 style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); margin-bottom: 30px;">
                 <div class="vibe-card">
@@ -303,6 +356,57 @@
             </div>
 
             <!-- Restaurants Grid -->
+            <style>
+                .restaurant-card {
+                    background: var(--card-bg);
+                    border: 1px solid var(--border);
+                    border-radius: 12px;
+                    overflow: hidden;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .restaurant-card:hover {
+                    transform: translateY(-2px);
+                    border-color: var(--accent);
+                }
+
+                .restaurant-img {
+                    height: 140px;
+                    width: 100%;
+                    object-fit: cover;
+                    background-color: #eee;
+                }
+
+                .restaurant-info {
+                    padding: 16px;
+                }
+
+                .restaurant-name {
+                    font-weight: 700;
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                    color: var(--text-primary);
+                }
+
+                .restaurant-meta {
+                    font-size: 13px;
+                    color: var(--text-secondary);
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                }
+
+                .rating-badge {
+                    background-color: #f3f4f6;
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: var(--text-primary);
+                }
+            </style>
             <div class="content-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
                 <!-- Restaurant 1 -->
                 <a href="/business" style="text-decoration: none;">
