@@ -13,11 +13,11 @@ FRONTEND_DIR = PROJECT_ROOT / "frontend"
 PAGES_DIR = FRONTEND_DIR / "pages"
 SCRIPTS_DIR = FRONTEND_DIR / "scripts"
 STYLES_DIR = FRONTEND_DIR / "styles"
+IMAGES_DIR = FRONTEND_DIR / "images"
 
 
 @app.get("/")
 def root():
-    # Choose a default landing page (change if you want)
     return redirect(url_for("client_page"))
 
 
@@ -31,7 +31,6 @@ def customer_page():
     return send_from_directory(PAGES_DIR, "customer.html")
 
 
-# Static assets (so your HTML can reference /scripts/client.js, /styles/theme.css, etc.)
 @app.get("/scripts/<path:filename>")
 def scripts(filename: str):
     return send_from_directory(SCRIPTS_DIR, filename)
@@ -41,7 +40,10 @@ def scripts(filename: str):
 def styles(filename: str):
     return send_from_directory(STYLES_DIR, filename)
 
+@app.get("/images/<path:filename>")
+def images(filename: str):
+    return send_from_directory(IMAGES_DIR, filename)
+
 
 if __name__ == "__main__":
-    # host=0.0.0.0 allows access from other devices on your network if needed
     app.run(host="0.0.0.0", port=5000, debug=True)
