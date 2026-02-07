@@ -245,5 +245,12 @@ def update_store_info():
     return jsonify({"ok": True})
 
 
+# Get menu
+@app.get("/api/menu")
+def get_menu():
+    menu_data = dataStore.to_dict()["menu"]
+    return jsonify({"ok": True, "menu": menu_data})
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
