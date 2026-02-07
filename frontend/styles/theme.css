@@ -56,6 +56,7 @@
   --clr-success:       #34d874;
   --clr-success-subtle:rgba(52,216,116,0.14);
   --clr-warning:       var(--clr-orange);
+  --clr-warning-subtle:rgba(216, 159, 52, 0.14);
 
   /* ── Radii ── */
   --radius-xs:  4px;
