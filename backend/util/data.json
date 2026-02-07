@@ -14,11 +14,7 @@
     "contact": {
         "phone": "+1-555-123-4567",
         "email": "contact@joesburgers.com",
-        "website": "https://joesburgers.com",
-        "socials": {
-            "instagram": "https://instagram.com/joesburgers",
-            "tiktok": "https://tiktok.com/@joesburgers"
-        }
+        "website": "https://joesburgers.com"
     },
 
     "location": {
@@ -98,12 +94,16 @@
             {
                 "date": "2026-12-25",
                 "closed": true,
+                "open": "",
+                "close": "",
                 "note": "Christmas"
             },
             {
                 "date": "2026-07-04",
+                "closed": false,
                 "open": "12:00",
-                "close": "20:00"
+                "close": "20:00",
+                "note": ""
             }
         ]
     }
