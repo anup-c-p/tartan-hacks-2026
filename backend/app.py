@@ -1,4 +1,4 @@
-from flask import Flask, request, send_from_directory, redirect, url_for, jsonify, abort
+from flask import Flask, request, send_from_directory, redirect, url_for, jsonify, abort, render_template
 from pathlib import Path
 from werkzeug.utils import secure_filename
 import uuid
@@ -13,14 +13,15 @@ DATA_FILE = Path(__file__).parent / "util" / "data.json"
 if DATA_FILE.exists():
     dataStore.loadFromJSON(str(DATA_FILE))
 
-app = Flask(__name__)
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 FRONTEND_DIR = PROJECT_ROOT / "frontend"
 PAGES_DIR = FRONTEND_DIR / "pages"
 SCRIPTS_DIR = FRONTEND_DIR / "scripts"
 STYLES_DIR = FRONTEND_DIR / "styles"
 IMAGES_DIR = FRONTEND_DIR / "images"
+TEMPLATE_DIR = FRONTEND_DIR / "pages"
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR)
 
 # New: where uploaded files will be stored
 UPLOADS_DIR = FRONTEND_DIR / "uploads"
@@ -43,7 +44,7 @@ def root():
 
 @app.get("/client")
 def client_page():
-    return send_from_directory(PAGES_DIR, "client.html")
+    return render_template("client.html", name=dataStore.getName(), desc=dataStore.getDescription(), categories=dataStore.getCategories(), tags=dataStore.getTags(), price=dataStore.getPriceRange(), address=dataStore.getLocation(), phone=dataStore.getPhone())
 
 
 @app.get("/customer")

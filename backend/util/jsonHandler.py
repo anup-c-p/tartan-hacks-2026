@@ -65,30 +65,54 @@ class Store:
     # -----------------
     def editName(self, name: str):
         self.name = name
+        
+    def getName(self):
+        return self.name
 
     def editDescription(self, description: str):
         self.description = description
+    
+    def getDescription(self):
+        return self.description
 
     def editType(self, store_type: str):
         self.type = store_type
+    
+    def getType(self):
+        return self.type
 
     def editCategories(self, categories: list):
         self.categories = list(categories) if categories is not None else []
+    
+    def getCategories(self):
+        return " ".join(self.categories)
 
     def editTags(self, tags: list):
         self.tags = list(tags) if tags is not None else []
+    
+    def getTags(self):
+        return " ".join(self.tags)
 
     def editPriceRange(self, priceRange: str):
         self.priceRange = priceRange
+    
+    def getPriceRange(self):
+        return self.priceRange
 
     # -------------
     # Contact edits
     # -------------
     def editPhone(self, phone: str):
         self.phone = phone
+    
+    def getPhone(self):
+        return self.phone
 
     def editEmail(self, email: str):
         self.email = email
+    
+    def getEmail(self):
+        return self.email
 
     # --------------
     # Location edits
@@ -114,7 +138,10 @@ class Store:
         self.location["coordinates"]["lat"] = lat
         self.location["coordinates"]["lng"] = lng
         self.location["directionsNote"] = directionsNote
-
+    
+    def getLocation(self):
+        return self.location["addressLine1"] + ", " + self.location["addressLine2"] + ", " + self.location["city"] + ", " + self.location["state"] + ", " + self.location["zip"]
+    
     # --------------
     # Menu categories
     # --------------
