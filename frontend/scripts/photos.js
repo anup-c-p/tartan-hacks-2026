@@ -3,7 +3,6 @@ const uploadBtn = document.getElementById('upload-photos');
 const photoGrid = photos.querySelector('.photo-grid');
 const photoOverview = document.getElementById('photos-overview-number');
 const photoBadge = photos.querySelector('.container-badge');
-const plusThumb = photos.querySelector('.photo-thumb.plus');
 
 const fileInput = document.createElement('input');
 fileInput.type = 'file';
@@ -46,17 +45,59 @@ fileInput.addEventListener('change', async () => {
   for (let i = 0; i < files.length; i++) {
     const reader = new FileReader();
     reader.onload = async (e) => {
-      addPhotoThumb(e.target.result);
+      const thumb = document.createElement('div');
+      thumb.className = 'photo-thumb';
+      thumb.style.backgroundImage = 'url(' + e.target.result + ')';
+      thumb.style.backgroundSize = 'cover';
+      thumb.style.backgroundPosition = 'center';
+      photoGrid.appendChild(thumb);
       updatePhotoCount();
-      const form = new FormData();
-      for (const f of fileInput.files) form.append("photos", f);
-      try {
-        const res = await fetch("/api/upload-photos", { method: "POST", body: form });
-        const data = await res.json();
-        // Photos are now persisted in data.json
-      } catch (err) {
-        console.error("Upload failed:", err);
-      }
+      fileInput.addEventListener('change', async () => {
+        const files = fileInput.files;
+
+        // existing preview loop...
+        for (let i = 0; i < files.length; i++) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            const thumb = document.createElement('div');
+            thumb.className = 'photo-thumb';
+            thumb.style.backgroundImage = 'url(' + e.target.result + ')';
+            thumb.style.backgroundSize = 'cover';
+            thumb.style.backgroundPosition = 'center';
+
+            // If plusThumb doesn't exist, just append
+            photoGrid.appendChild(thumb);
+
+            updatePhotoCount();
+          };
+          reader.readAsDataURL(files[i]);
+        }
+
+        // ✅ Upload to Flask
+        const formData = new FormData();
+        for (let i = 0; i < files.length; i++) {
+          formData.append("photos", files[i]); // MUST be "photos"
+        }
+
+        try {
+          const res = await fetch("/api/upload-photos", {
+            method: "POST",
+            body: formData
+            // IMPORTANT: do NOT set Content-Type manually
+          });
+
+          if (!res.ok) {
+            console.error("Upload failed:", await res.text());
+          } else {
+            const data = await res.json();
+            console.log("Saved on server:", data.urls);
+          }
+        } catch (e) {
+          console.error("Upload error:", e);
+        }
+
+        fileInput.value = '';
+      });
     };
     reader.readAsDataURL(files[i]);
   }
@@ -67,7 +108,6 @@ function updatePhotoCount() {
   const count = photoGrid.querySelectorAll('.photo-thumb:not(.plus)').length;
   photoOverview.innerText = count;
   photoBadge.innerText = count + ' uploaded';
-  plusThumb.innerText = '+' + Math.max(0, count - 5);
 }
 
 // Load photos when script runs
