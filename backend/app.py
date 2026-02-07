@@ -2,10 +2,16 @@ from flask import Flask, request, send_from_directory, redirect, url_for, jsonif
 from pathlib import Path
 from werkzeug.utils import secure_filename
 import uuid
+import json
 
 import util.jsonHandler as jsh
 
 dataStore = jsh.Store("0", "0")
+
+# Load from data.json if exists
+DATA_FILE = Path(__file__).parent / "util" / "data.json"
+if DATA_FILE.exists():
+    dataStore.loadFromJSON(str(DATA_FILE))
 
 app = Flask(__name__)
 
@@ -88,9 +94,12 @@ def upload_photos():
         urls.append(url)
         saved.append(unique)
 
-    # Optional: store in your JSON store if you want persistence/listing
-    # (only do this if your Store supports it)
-    # dataStore.add_photos(urls)  # <-- example
+        # Add to dataStore
+        photo_id = f"photo_{uuid.uuid4().hex}"
+        dataStore.addPhoto(photo_id, url, "uploaded", "")
+
+    # Save to data.json
+    dataStore.saveToJSON(str(DATA_FILE))
 
     return jsonify({"ok": True, "urls": urls, "files": saved})
 
@@ -104,10 +113,8 @@ def uploads(filename: str):
 # Optional: list uploaded photos (useful for reloading page and showing existing uploads)
 @app.get("/api/photos")
 def list_photos():
-    files = [p.name for p in UPLOADS_DIR.iterdir() if p.is_file()]
-    # You can filter by extension if you want
-    urls = [f"/uploads/{name}" for name in sorted(files)]
-    return jsonify({"ok": True, "urls": urls})
+    photos = [{"id": pid, **pdata} for pid, pdata in dataStore.photos.items()]
+    return jsonify({"ok": True, "photos": photos})
 
 
 if __name__ == "__main__":

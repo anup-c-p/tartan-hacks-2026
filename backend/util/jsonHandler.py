@@ -434,3 +434,10 @@ class Store:
         self.hours["special"] = {}
         for s in hours.get("special", []):
             self.hours["special"][s["date"]] = s
+
+    def saveToJSON(self, filepath: str):
+        """
+        Save the store to a JSON file.
+        """
+        with open(filepath, "w") as f:
+            json.dump(self.to_dict(), f, indent=2)

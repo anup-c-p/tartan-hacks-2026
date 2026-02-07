@@ -23,6 +23,12 @@ var translations = {
     'menu.burgers': 'Burgers', 'menu.sides': 'Sides',
     'day.mon': 'Monday', 'day.tue': 'Tuesday', 'day.wed': 'Wednesday', 'day.thu': 'Thursday',
     'day.fri': 'Friday', 'day.sat': 'Saturday', 'day.sun': 'Sunday', 'tag.today': 'Today',
+    'channel.synced5m': 'Synced 5m ago', 'channel.synced20m': 'Synced 20m ago',
+    'channel.syncPending': 'Sync pending', 'channel.synced30m': 'Synced 30m ago',
+    'activity.menuSynced': 'Menu synced to', 'activity.hoursUpdated': 'Hours updated on',
+    'activity.syncPending': 'Sync pending for', 'activity.photosSynced': 'Photos synced to',
+    'activity.5min': '5 minutes ago', 'activity.20min': '20 minutes ago',
+    'activity.45min': '45 minutes ago', 'activity.1hr': '1 hour ago',
     'search.placeholder': 'Search'
   },
 
@@ -50,6 +56,12 @@ var translations = {
     'menu.burgers': 'Hamburguesas', 'menu.sides': 'Acompañamientos',
     'day.mon': 'Lunes', 'day.tue': 'Martes', 'day.wed': 'Miércoles', 'day.thu': 'Jueves',
     'day.fri': 'Viernes', 'day.sat': 'Sábado', 'day.sun': 'Domingo', 'tag.today': 'Hoy',
+    'channel.synced5m': 'Sincro hace 5m', 'channel.synced20m': 'Sincro hace 20m',
+    'channel.syncPending': 'Sincro pendiente', 'channel.synced30m': 'Sincro hace 30m',
+    'activity.menuSynced': 'Menú sincronizado con', 'activity.hoursUpdated': 'Horarios actualizados en',
+    'activity.syncPending': 'Sincro pendiente para', 'activity.photosSynced': 'Fotos sincronizadas con',
+    'activity.5min': 'hace 5 minutos', 'activity.20min': 'hace 20 minutos',
+    'activity.45min': 'hace 45 minutos', 'activity.1hr': 'hace 1 hora',
     'search.placeholder': 'Buscar'
   },
 
@@ -77,6 +89,12 @@ var translations = {
     'menu.burgers': '汉堡', 'menu.sides': '小食',
     'day.mon': '周一', 'day.tue': '周二', 'day.wed': '周三', 'day.thu': '周四',
     'day.fri': '周五', 'day.sat': '周六', 'day.sun': '周日', 'tag.today': '今天',
+    'channel.synced5m': '5分钟前已同步', 'channel.synced20m': '20分钟前已同步',
+    'channel.syncPending': '同步待处理', 'channel.synced30m': '30分钟前已同步',
+    'activity.menuSynced': '菜单已同步到', 'activity.hoursUpdated': '营业时间已更新到',
+    'activity.syncPending': '等待同步', 'activity.photosSynced': '照片已同步到',
+    'activity.5min': '5分钟前', 'activity.20min': '20分钟前',
+    'activity.45min': '45分钟前', 'activity.1hr': '1小时前',
     'search.placeholder': '搜索'
   },
 
@@ -104,6 +122,12 @@ var translations = {
     'menu.burgers': '버거', 'menu.sides': '사이드',
     'day.mon': '월요일', 'day.tue': '화요일', 'day.wed': '수요일', 'day.thu': '목요일',
     'day.fri': '금요일', 'day.sat': '토요일', 'day.sun': '일요일', 'tag.today': '오늘',
+    'channel.synced5m': '5분 전 동기화', 'channel.synced20m': '20분 전 동기화',
+    'channel.syncPending': '동기화 대기', 'channel.synced30m': '30분 전 동기화',
+    'activity.menuSynced': '메뉴 동기화 완료:', 'activity.hoursUpdated': '영업시간 업데이트:',
+    'activity.syncPending': '동기화 대기 중:', 'activity.photosSynced': '사진 동기화 완료:',
+    'activity.5min': '5분 전', 'activity.20min': '20분 전',
+    'activity.45min': '45분 전', 'activity.1hr': '1시간 전',
     'search.placeholder': '검색'
   },
 
@@ -131,6 +155,12 @@ var translations = {
     'menu.burgers': 'バーガー', 'menu.sides': 'サイド',
     'day.mon': '月曜日', 'day.tue': '火曜日', 'day.wed': '水曜日', 'day.thu': '木曜日',
     'day.fri': '金曜日', 'day.sat': '土曜日', 'day.sun': '日曜日', 'tag.today': '今日',
+    'channel.synced5m': '5分前に同期', 'channel.synced20m': '20分前に同期',
+    'channel.syncPending': '同期保留中', 'channel.synced30m': '30分前に同期',
+    'activity.menuSynced': 'メニュー同期先:', 'activity.hoursUpdated': '営業時間更新先:',
+    'activity.syncPending': '同期保留中:', 'activity.photosSynced': '写真同期先:',
+    'activity.5min': '5分前', 'activity.20min': '20分前',
+    'activity.45min': '45分前', 'activity.1hr': '1時間前',
     'search.placeholder': '検索'
   },
 
@@ -158,6 +188,12 @@ var translations = {
     'menu.burgers': 'Burgers', 'menu.sides': 'Accompagnements',
     'day.mon': 'Lundi', 'day.tue': 'Mardi', 'day.wed': 'Mercredi', 'day.thu': 'Jeudi',
     'day.fri': 'Vendredi', 'day.sat': 'Samedi', 'day.sun': 'Dimanche', 'tag.today': 'Aujourd\'hui',
+    'channel.synced5m': 'Synchronisé il y a 5m', 'channel.synced20m': 'Synchronisé il y a 20m',
+    'channel.syncPending': 'Synchro en attente', 'channel.synced30m': 'Synchronisé il y a 30m',
+    'activity.menuSynced': 'Menu synchronisé avec', 'activity.hoursUpdated': 'Horaires mis à jour sur',
+    'activity.syncPending': 'Synchro en attente pour', 'activity.photosSynced': 'Photos synchronisées avec',
+    'activity.5min': 'il y a 5 minutes', 'activity.20min': 'il y a 20 minutes',
+    'activity.45min': 'il y a 45 minutes', 'activity.1hr': 'il y a 1 heure',
     'search.placeholder': 'Rechercher'
   }
 };
