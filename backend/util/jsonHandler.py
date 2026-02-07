@@ -239,7 +239,7 @@ class Store:
     # ------
     # Hours
     # ------
-    def editHours(self, Day: str, open: str = None, close: str = None):
+    def editHours(self, Day: str, closed: bool, open: str = None, close: str = None):
         """
         If open/close are provided -> sets open/close and marks not closed.
         If open is None and close is None -> marks closed.
@@ -248,7 +248,7 @@ class Store:
         if day not in self.hours["regular"]:
             raise ValueError(f"Invalid day '{Day}'")
 
-        if open is None and close is None:
+        if closed is True:
             self.hours["regular"][day] = {"closed": True}
         else:
             if open is None or close is None:
@@ -267,14 +267,19 @@ class Store:
         entry = {"date": date}
         if closed:
             entry["closed"] = True
+            entry["open"] = ""
+            entry["closed"] = ""
         else:
             if open is None or close is None:
                 raise ValueError("open and close required when closed=False")
             entry["open"] = open
             entry["close"] = close
 
-        if note:
+        if note is not None:
             entry["note"] = note
+            
+        else:
+            entry["note"] = ""
 
         self.hours["special"][date] = entry
 
@@ -292,6 +297,8 @@ class Store:
                 entry.pop("open", None)
                 entry.pop("close", None)
                 entry["closed"] = True
+                entry["open"] = ""
+                entry["closed"] = ""
             else:
                 if open is None or close is None:
                     raise ValueError("open and close required when setting closed=False")
@@ -308,10 +315,10 @@ class Store:
             entry["close"] = close
 
         if note is not None:
-            if note == "":
-                entry.pop("note", None)
-            else:
-                entry["note"] = note
+            entry["note"] = note
+        
+        else:
+            entry["notes"] = ""
 
     def removeSpecialHours(self, date: str):
         if date not in self.hours["special"]:
