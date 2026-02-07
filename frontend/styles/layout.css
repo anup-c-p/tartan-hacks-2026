@@ -553,6 +553,7 @@ button { cursor: pointer; font-family: inherit; }
   justify-content: space-between;
   padding: var(--sp-4) var(--sp-5);
   border-bottom: 1px solid var(--border);
+  margin-bottom: var(--sp-4);
 }
 .container-header-left {
   display: flex;
