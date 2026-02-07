@@ -50,9 +50,9 @@ def client_page():
 def customer_page():
     return send_from_directory(PAGES_DIR, "customer.html")
     
-@app.get("/business")
-def business_page():
-    return send_from_directory(PAGES_DIR, "business.html")
+@app.get("/szechuan")
+def szechuan_page():
+    return send_from_directory(PAGES_DIR, "szechuan.html")
 
 
 @app.get("/home")
@@ -68,6 +68,41 @@ def bella_italia_page():
 @app.get("/burger-joint")
 def burger_joint_page():
     return send_from_directory(PAGES_DIR, "burger_joint.html")
+
+
+@app.get("/sushi-zen")
+def sushi_zen_page():
+    return send_from_directory(PAGES_DIR, "sushi_zen.html")
+
+
+@app.get("/taco-fiesta")
+def taco_fiesta_page():
+    return send_from_directory(PAGES_DIR, "taco_fiesta.html")
+
+
+@app.get("/green-leaf")
+def green_leaf_page():
+    return send_from_directory(PAGES_DIR, "green_leaf.html")
+
+
+@app.get("/curry-house")
+def curry_house_page():
+    return send_from_directory(PAGES_DIR, "curry_house.html")
+
+
+@app.get("/steakhouse")
+def steakhouse_page():
+    return send_from_directory(PAGES_DIR, "steakhouse.html")
+
+
+@app.get("/morning-brew")
+def morning_brew_page():
+    return send_from_directory(PAGES_DIR, "morning_brew.html")
+
+
+@app.get("/pizza-slice")
+def pizza_slice_page():
+    return send_from_directory(PAGES_DIR, "pizza_slice.html")
 
 @app.get("/scripts/<path:filename>")
 def scripts(filename: str):
