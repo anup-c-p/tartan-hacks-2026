@@ -1,0 +1,184 @@
+var translations = {
+  en: {
+    'nav.home': 'Home', 'nav.explore': 'Explore', 'nav.dashboard': 'Dashboard',
+    'nav.listings': 'Listings', 'nav.marketing': 'Marketing',
+    'sidebar.management': 'Management', 'sidebar.distribution': 'Distribution', 'sidebar.settings': 'Settings',
+    'sidebar.overview': 'Overview', 'sidebar.storeInfo': 'Store Info', 'sidebar.menu': 'Menu',
+    'sidebar.photos': 'Photos', 'sidebar.hours': 'Hours', 'sidebar.channels': 'Connected Channels',
+    'sidebar.syncStatus': 'Sync Status', 'sidebar.googleListing': 'Google Listing',
+    'sidebar.team': 'Team & Permissions', 'sidebar.billing': 'Billing & Plan', 'sidebar.preferences': 'Preferences',
+    'store.open': 'Open', 'sync.waiting': 'Waiting on 1 sync', 'sync.time': '2m ago',
+    'page.title': 'Overview', 'page.subtitle': 'Manage your restaurant listing and keep all platforms in sync.',
+    'btn.syncAll': 'Sync All', 'btn.addListing': 'Add Listing', 'btn.edit': 'Edit', 'btn.editMenu': 'Edit',
+    'btn.add': 'Add', 'btn.upload': 'Upload', 'btn.manage': 'Manage', 'btn.viewAll': 'View All',
+    'btn.viewAllItems': 'View all 24 items →',
+    'stat.channels': 'Connected Channels', 'stat.menuItems': 'Menu Items',
+    'stat.photos': 'Photos Uploaded', 'stat.pendingSyncs': 'Pending Syncs',
+    'section.storeInfo': 'Store Info', 'section.channels': 'Connected Channels',
+    'section.menu': 'Menu', 'section.photos': 'Photos', 'section.hours': 'Hours',
+    'section.syncActivity': 'Recent Sync Activity',
+    'info.name': 'Name', 'info.description': 'Description', 'info.categories': 'Categories',
+    'info.tags': 'Tags', 'info.price': 'Price', 'info.address': 'Address', 'info.phone': 'Phone',
+    'badge.menuItems': '24 items', 'badge.photosUploaded': '0 uploaded', 'badge.pending': '1 pending',
+    'menu.burgers': 'Burgers', 'menu.sides': 'Sides',
+    'day.mon': 'Monday', 'day.tue': 'Tuesday', 'day.wed': 'Wednesday', 'day.thu': 'Thursday',
+    'day.fri': 'Friday', 'day.sat': 'Saturday', 'day.sun': 'Sunday', 'tag.today': 'Today',
+    'search.placeholder': 'Search'
+  },
+
+  es: {
+    'nav.home': 'Inicio', 'nav.explore': 'Explorar', 'nav.dashboard': 'Panel',
+    'nav.listings': 'Listados', 'nav.marketing': 'Marketing',
+    'sidebar.management': 'Gestión', 'sidebar.distribution': 'Distribución', 'sidebar.settings': 'Ajustes',
+    'sidebar.overview': 'Resumen', 'sidebar.storeInfo': 'Info del Local', 'sidebar.menu': 'Menú',
+    'sidebar.photos': 'Fotos', 'sidebar.hours': 'Horarios', 'sidebar.channels': 'Canales Conectados',
+    'sidebar.syncStatus': 'Estado de Sincro', 'sidebar.googleListing': 'Ficha de Google',
+    'sidebar.team': 'Equipo y Permisos', 'sidebar.billing': 'Facturación y Plan', 'sidebar.preferences': 'Preferencias',
+    'store.open': 'Abierto', 'sync.waiting': 'Esperando 1 sincro', 'sync.time': 'hace 2m',
+    'page.title': 'Resumen', 'page.subtitle': 'Gestiona tu restaurante y mantén todas las plataformas sincronizadas.',
+    'btn.syncAll': 'Sincronizar Todo', 'btn.addListing': 'Añadir Listado', 'btn.edit': 'Editar', 'btn.editMenu': 'Editar',
+    'btn.add': 'Añadir', 'btn.upload': 'Subir', 'btn.manage': 'Gestionar', 'btn.viewAll': 'Ver Todo',
+    'btn.viewAllItems': 'Ver los 24 artículos →',
+    'stat.channels': 'Canales Conectados', 'stat.menuItems': 'Artículos del Menú',
+    'stat.photos': 'Fotos Subidas', 'stat.pendingSyncs': 'Sincros Pendientes',
+    'section.storeInfo': 'Info del Local', 'section.channels': 'Canales Conectados',
+    'section.menu': 'Menú', 'section.photos': 'Fotos', 'section.hours': 'Horarios',
+    'section.syncActivity': 'Actividad Reciente',
+    'info.name': 'Nombre', 'info.description': 'Descripción', 'info.categories': 'Categorías',
+    'info.tags': 'Etiquetas', 'info.price': 'Precio', 'info.address': 'Dirección', 'info.phone': 'Teléfono',
+    'badge.menuItems': '24 artículos', 'badge.photosUploaded': '0 subidas', 'badge.pending': '1 pendiente',
+    'menu.burgers': 'Hamburguesas', 'menu.sides': 'Acompañamientos',
+    'day.mon': 'Lunes', 'day.tue': 'Martes', 'day.wed': 'Miércoles', 'day.thu': 'Jueves',
+    'day.fri': 'Viernes', 'day.sat': 'Sábado', 'day.sun': 'Domingo', 'tag.today': 'Hoy',
+    'search.placeholder': 'Buscar'
+  },
+
+  zh: {
+    'nav.home': '首页', 'nav.explore': '探索', 'nav.dashboard': '仪表板',
+    'nav.listings': '列表', 'nav.marketing': '营销',
+    'sidebar.management': '管理', 'sidebar.distribution': '分发', 'sidebar.settings': '设置',
+    'sidebar.overview': '概览', 'sidebar.storeInfo': '店铺信息', 'sidebar.menu': '菜单',
+    'sidebar.photos': '照片', 'sidebar.hours': '营业时间', 'sidebar.channels': '已连接渠道',
+    'sidebar.syncStatus': '同步状态', 'sidebar.googleListing': 'Google 列表',
+    'sidebar.team': '团队与权限', 'sidebar.billing': '账单与计划', 'sidebar.preferences': '偏好设置',
+    'store.open': '营业中', 'sync.waiting': '等待1个同步', 'sync.time': '2分钟前',
+    'page.title': '概览', 'page.subtitle': '管理您的餐厅信息，保持所有平台同步。',
+    'btn.syncAll': '全部同步', 'btn.addListing': '添加列表', 'btn.edit': '编辑', 'btn.editMenu': '编辑',
+    'btn.add': '添加', 'btn.upload': '上传', 'btn.manage': '管理', 'btn.viewAll': '查看全部',
+    'btn.viewAllItems': '查看全部24个菜品 →',
+    'stat.channels': '已连接渠道', 'stat.menuItems': '菜品数量',
+    'stat.photos': '已上传照片', 'stat.pendingSyncs': '待同步',
+    'section.storeInfo': '店铺信息', 'section.channels': '已连接渠道',
+    'section.menu': '菜单', 'section.photos': '照片', 'section.hours': '营业时间',
+    'section.syncActivity': '最近同步活动',
+    'info.name': '名称', 'info.description': '描述', 'info.categories': '分类',
+    'info.tags': '标签', 'info.price': '价格', 'info.address': '地址', 'info.phone': '电话',
+    'badge.menuItems': '24个菜品', 'badge.photosUploaded': '0张已上传', 'badge.pending': '1个待处理',
+    'menu.burgers': '汉堡', 'menu.sides': '小食',
+    'day.mon': '周一', 'day.tue': '周二', 'day.wed': '周三', 'day.thu': '周四',
+    'day.fri': '周五', 'day.sat': '周六', 'day.sun': '周日', 'tag.today': '今天',
+    'search.placeholder': '搜索'
+  },
+
+  ko: {
+    'nav.home': '홈', 'nav.explore': '탐색', 'nav.dashboard': '대시보드',
+    'nav.listings': '목록', 'nav.marketing': '마케팅',
+    'sidebar.management': '관리', 'sidebar.distribution': '배포', 'sidebar.settings': '설정',
+    'sidebar.overview': '개요', 'sidebar.storeInfo': '매장 정보', 'sidebar.menu': '메뉴',
+    'sidebar.photos': '사진', 'sidebar.hours': '영업시간', 'sidebar.channels': '연결된 채널',
+    'sidebar.syncStatus': '동기화 상태', 'sidebar.googleListing': 'Google 목록',
+    'sidebar.team': '팀 및 권한', 'sidebar.billing': '결제 및 플랜', 'sidebar.preferences': '환경설정',
+    'store.open': '영업중', 'sync.waiting': '1개 동기화 대기', 'sync.time': '2분 전',
+    'page.title': '개요', 'page.subtitle': '레스토랑 정보를 관리하고 모든 플랫폼을 동기화하세요.',
+    'btn.syncAll': '전체 동기화', 'btn.addListing': '목록 추가', 'btn.edit': '편집', 'btn.editMenu': '편집',
+    'btn.add': '추가', 'btn.upload': '업로드', 'btn.manage': '관리', 'btn.viewAll': '전체 보기',
+    'btn.viewAllItems': '24개 항목 모두 보기 →',
+    'stat.channels': '연결된 채널', 'stat.menuItems': '메뉴 항목',
+    'stat.photos': '업로드된 사진', 'stat.pendingSyncs': '대기 중 동기화',
+    'section.storeInfo': '매장 정보', 'section.channels': '연결된 채널',
+    'section.menu': '메뉴', 'section.photos': '사진', 'section.hours': '영업시간',
+    'section.syncActivity': '최근 동기화 활동',
+    'info.name': '이름', 'info.description': '설명', 'info.categories': '카테고리',
+    'info.tags': '태그', 'info.price': '가격', 'info.address': '주소', 'info.phone': '전화',
+    'badge.menuItems': '24개 항목', 'badge.photosUploaded': '0개 업로드', 'badge.pending': '1개 대기',
+    'menu.burgers': '버거', 'menu.sides': '사이드',
+    'day.mon': '월요일', 'day.tue': '화요일', 'day.wed': '수요일', 'day.thu': '목요일',
+    'day.fri': '금요일', 'day.sat': '토요일', 'day.sun': '일요일', 'tag.today': '오늘',
+    'search.placeholder': '검색'
+  },
+
+  ja: {
+    'nav.home': 'ホーム', 'nav.explore': '探索', 'nav.dashboard': 'ダッシュボード',
+    'nav.listings': 'リスト', 'nav.marketing': 'マーケティング',
+    'sidebar.management': '管理', 'sidebar.distribution': '配信', 'sidebar.settings': '設定',
+    'sidebar.overview': '概要', 'sidebar.storeInfo': '店舗情報', 'sidebar.menu': 'メニュー',
+    'sidebar.photos': '写真', 'sidebar.hours': '営業時間', 'sidebar.channels': '接続チャネル',
+    'sidebar.syncStatus': '同期状況', 'sidebar.googleListing': 'Googleリスト',
+    'sidebar.team': 'チームと権限', 'sidebar.billing': '請求とプラン', 'sidebar.preferences': '設定',
+    'store.open': '営業中', 'sync.waiting': '1件の同期待ち', 'sync.time': '2分前',
+    'page.title': '概要', 'page.subtitle': 'レストラン情報を管理し、すべてのプラットフォームを同期します。',
+    'btn.syncAll': 'すべて同期', 'btn.addListing': 'リスト追加', 'btn.edit': '編集', 'btn.editMenu': '編集',
+    'btn.add': '追加', 'btn.upload': 'アップロード', 'btn.manage': '管理', 'btn.viewAll': 'すべて見る',
+    'btn.viewAllItems': '全24品を見る →',
+    'stat.channels': '接続チャネル', 'stat.menuItems': 'メニュー品数',
+    'stat.photos': 'アップロード写真', 'stat.pendingSyncs': '保留中の同期',
+    'section.storeInfo': '店舗情報', 'section.channels': '接続チャネル',
+    'section.menu': 'メニュー', 'section.photos': '写真', 'section.hours': '営業時間',
+    'section.syncActivity': '最近の同期アクティビティ',
+    'info.name': '名前', 'info.description': '説明', 'info.categories': 'カテゴリ',
+    'info.tags': 'タグ', 'info.price': '価格', 'info.address': '住所', 'info.phone': '電話',
+    'badge.menuItems': '24品', 'badge.photosUploaded': '0枚アップロード', 'badge.pending': '1件保留',
+    'menu.burgers': 'バーガー', 'menu.sides': 'サイド',
+    'day.mon': '月曜日', 'day.tue': '火曜日', 'day.wed': '水曜日', 'day.thu': '木曜日',
+    'day.fri': '金曜日', 'day.sat': '土曜日', 'day.sun': '日曜日', 'tag.today': '今日',
+    'search.placeholder': '検索'
+  },
+
+  fr: {
+    'nav.home': 'Accueil', 'nav.explore': 'Explorer', 'nav.dashboard': 'Tableau de bord',
+    'nav.listings': 'Annonces', 'nav.marketing': 'Marketing',
+    'sidebar.management': 'Gestion', 'sidebar.distribution': 'Distribution', 'sidebar.settings': 'Paramètres',
+    'sidebar.overview': 'Aperçu', 'sidebar.storeInfo': 'Info Restaurant', 'sidebar.menu': 'Menu',
+    'sidebar.photos': 'Photos', 'sidebar.hours': 'Horaires', 'sidebar.channels': 'Canaux Connectés',
+    'sidebar.syncStatus': 'État de Synchro', 'sidebar.googleListing': 'Fiche Google',
+    'sidebar.team': 'Équipe et Droits', 'sidebar.billing': 'Facturation et Plan', 'sidebar.preferences': 'Préférences',
+    'store.open': 'Ouvert', 'sync.waiting': 'En attente d\'1 synchro', 'sync.time': 'il y a 2m',
+    'page.title': 'Aperçu', 'page.subtitle': 'Gérez votre restaurant et synchronisez toutes les plateformes.',
+    'btn.syncAll': 'Tout Synchroniser', 'btn.addListing': 'Ajouter Annonce', 'btn.edit': 'Modifier', 'btn.editMenu': 'Modifier',
+    'btn.add': 'Ajouter', 'btn.upload': 'Télécharger', 'btn.manage': 'Gérer', 'btn.viewAll': 'Tout Voir',
+    'btn.viewAllItems': 'Voir les 24 articles →',
+    'stat.channels': 'Canaux Connectés', 'stat.menuItems': 'Articles du Menu',
+    'stat.photos': 'Photos Importées', 'stat.pendingSyncs': 'Synchros en Attente',
+    'section.storeInfo': 'Info Restaurant', 'section.channels': 'Canaux Connectés',
+    'section.menu': 'Menu', 'section.photos': 'Photos', 'section.hours': 'Horaires',
+    'section.syncActivity': 'Activité Récente',
+    'info.name': 'Nom', 'info.description': 'Description', 'info.categories': 'Catégories',
+    'info.tags': 'Étiquettes', 'info.price': 'Prix', 'info.address': 'Adresse', 'info.phone': 'Téléphone',
+    'badge.menuItems': '24 articles', 'badge.photosUploaded': '0 importées', 'badge.pending': '1 en attente',
+    'menu.burgers': 'Burgers', 'menu.sides': 'Accompagnements',
+    'day.mon': 'Lundi', 'day.tue': 'Mardi', 'day.wed': 'Mercredi', 'day.thu': 'Jeudi',
+    'day.fri': 'Vendredi', 'day.sat': 'Samedi', 'day.sun': 'Dimanche', 'tag.today': 'Aujourd\'hui',
+    'search.placeholder': 'Rechercher'
+  }
+};
+
+function applyTranslation(lang) {
+  var dict = translations[lang];
+  if (!dict) return;
+
+  var els = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < els.length; i++) {
+    var key = els[i].getAttribute('data-i18n');
+    if (dict[key]) els[i].textContent = dict[key];
+  }
+
+  var inputs = document.querySelectorAll('[data-i18n-placeholder]');
+  for (var j = 0; j < inputs.length; j++) {
+    var key = inputs[j].getAttribute('data-i18n-placeholder');
+    if (dict[key]) inputs[j].placeholder = dict[key];
+  }
+}
+
+document.querySelector('.lang-select').addEventListener('change', function () {
+  applyTranslation(this.value);
+});
