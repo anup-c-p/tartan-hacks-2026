@@ -60,6 +60,20 @@ def szechuan_page():
 def home_page():
     return send_from_directory(PAGES_DIR, "home.html")
 
+@app.get("/orders")
+def orders_page():
+    return send_from_directory(PAGES_DIR, "orders.html")
+
+
+@app.get("/favorites")
+def favorites_page():
+    return send_from_directory(PAGES_DIR, "favorites.html")
+
+
+@app.get("/settings")
+def settings_page():
+    return send_from_directory(PAGES_DIR, "settings.html")
+
 
 @app.get("/bella-italia")
 def bella_italia_page():
