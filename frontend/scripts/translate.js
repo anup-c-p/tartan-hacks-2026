@@ -220,8 +220,3 @@ document.querySelector('.lang-select').addEventListener('change', function () {
   localStorage.setItem('selectedLang', lang);
   applyTranslation(lang);
 });
-
-// Initialize language on page load
-const savedLang = localStorage.getItem('selectedLang') || 'en';
-document.querySelector('.lang-select').value = savedLang;
-applyTranslation(savedLang);
