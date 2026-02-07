@@ -212,36 +212,52 @@ def get_store_info():
 # Update store info
 @app.post("/api/update-store-info")
 def update_store_info():
-    data = request.get_json()
+    data = request.get_json(silent=True)
     if not data:
         abort(400, "No data provided")
 
-    # Update info
-    dataStore.editName(data.get("name", ""))
-    dataStore.editDescription(data.get("description", ""))
-    dataStore.editCategories(data.get("categories", "").split(", "))
-    dataStore.editTags(data.get("tags", "").split(", "))
-    dataStore.editPriceRange(data.get("priceRange", ""))
+    def split_csv(s: str):
+        # Accept: "Burgers, Fast Casual, American" or "Burgers,Fast Casual,American"
+        if not s:
+            return []
+        return [x.strip() for x in s.split(",") if x.strip()]
 
-    # Update contact
-    dataStore.editPhone(data.get("phone", ""))
+    # ---- basic fields ----
+    dataStore.editName((data.get("name") or "").strip())
+    dataStore.editDescription((data.get("description") or "").strip())
+    dataStore.editPriceRange((data.get("priceRange") or "").strip())
+    dataStore.editPhone((data.get("phone") or "").strip())
 
-    # Update location - parse address
-    address = data.get("address", "")
-    parts = [p.strip() for p in address.split(",")]
-    if len(parts) >= 4:
-        addressLine1 = parts[0]
-        city = parts[1]
-        state_zip = parts[2].split()
-        if len(state_zip) >= 2:
-            state = state_zip[0]
-            zip_code = state_zip[1]
+    # ---- list fields (categories/tags) ----
+    dataStore.editCategories(split_csv(data.get("categories") or ""))
+    dataStore.editTags(split_csv(data.get("tags") or ""))
+
+    # ---- address parsing ----
+    # Expect something like: "123 Main St, Springfield, IL 62701"
+    address_raw = (data.get("address") or "").strip()
+    if address_raw:
+        parts = [p.strip() for p in address_raw.split(",") if p.strip()]
+
+        addressLine1 = parts[0] if len(parts) >= 1 else ""
+        city = parts[1] if len(parts) >= 2 else ""
+
+        state = ""
+        zip_code = ""
+
+        # The third chunk is usually "IL 62701" (but could be just "IL" or just "62701")
+        if len(parts) >= 3:
+            state_zip = parts[2].split()
+            if len(state_zip) >= 1:
+                state = state_zip[0]
+            if len(state_zip) >= 2:
+                zip_code = state_zip[1]
+
+        # Only write location if we have at least address + city
+        if addressLine1 and city:
             dataStore.editLocation(addressLine1, city, state, zip_code)
 
     # Save to data.json
     dataStore.saveToJSON(str(DATA_FILE))
-    print("Updated store info and saved to data.json")
-
     return jsonify({"ok": True})
 
 
