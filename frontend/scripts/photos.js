@@ -1,6 +1,7 @@
 const photos = document.getElementById('photos');
 const uploadBtn = document.getElementById('upload-photos');
 const photoGrid = photos.querySelector('.photo-grid');
+const photoOverview = document.getElementById('photos-overview-number');
 const photoBadge = photos.querySelector('.container-badge');
 const plusThumb = photos.querySelector('.photo-thumb.plus');
 
@@ -36,6 +37,7 @@ fileInput.addEventListener('change', () => {
 
 function updatePhotoCount() {
   const count = photoGrid.querySelectorAll('.photo-thumb:not(.plus)').length;
+  photoOverview.innerText = count;
   photoBadge.innerText = count + ' uploaded';
   plusThumb.innerText = '+' + Math.max(0, count - 5);
 }
