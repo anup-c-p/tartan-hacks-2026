@@ -40,7 +40,7 @@ var translations = {
     'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
     'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
     'promo.freeDelivery': 'Free Delivery', 'promo.bogoPizza': 'BOGO Pizza', 'promo.20off': '20% Off',
-    'home.welcome': 'Welcome back, Anthony! 👋', 'home.subtitle': 'Here\'s what\'s happening around you.',
+    'home.welcome': 'Welcome back, Nolan! 👋', 'home.subtitle': 'Here\'s what\'s happening around you.',
     'home.reorder': 'Likely to reorder', 'home.order': 'Order', 'home.yourFavorites': 'Your Favorites',
     'search.placeholder': 'Search'
   },
@@ -86,7 +86,7 @@ var translations = {
     'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
     'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
     'promo.freeDelivery': 'Envío Gratis', 'promo.bogoPizza': '2x1 Pizza', 'promo.20off': '20% Desc.',
-    'home.welcome': '¡Bienvenido, Anthony! 👋', 'home.subtitle': 'Esto es lo que está pasando a tu alrededor.',
+    'home.welcome': '¡Bienvenido, Nolan! 👋', 'home.subtitle': 'Esto es lo que está pasando a tu alrededor.',
     'home.reorder': 'Probable que repitas', 'home.order': 'Pedir', 'home.yourFavorites': 'Tus Favoritos',
     'search.placeholder': 'Buscar'
   },
@@ -132,7 +132,7 @@ var translations = {
     'time.1020': '10-20分钟', 'time.1525': '15-25分钟', 'time.2030': '20-30分钟',
     'time.3040': '30-40分钟', 'time.3045': '30-45分钟', 'time.4560': '45-60分钟',
     'promo.freeDelivery': '免费配送', 'promo.bogoPizza': '买一送一披萨', 'promo.20off': '八折优惠',
-    'home.welcome': '欢迎回来，Anthony！👋', 'home.subtitle': '看看你周围发生了什么。',
+    'home.welcome': '欢迎回来，Nolan！👋', 'home.subtitle': '看看你周围发生了什么。',
     'home.reorder': '可能会再点', 'home.order': '下单', 'home.yourFavorites': '你的收藏',
     'search.placeholder': '搜索'
   },
@@ -178,7 +178,7 @@ var translations = {
     'time.1020': '10-20분', 'time.1525': '15-25분', 'time.2030': '20-30분',
     'time.3040': '30-40분', 'time.3045': '30-45분', 'time.4560': '45-60분',
     'promo.freeDelivery': '무료 배달', 'promo.bogoPizza': '피자 1+1', 'promo.20off': '20% 할인',
-    'home.welcome': '다시 오신 걸 환영해요, Anthony! 👋', 'home.subtitle': '주변에서 일어나고 있는 일들이에요.',
+    'home.welcome': '다시 오신 걸 환영해요, Nolan! 👋', 'home.subtitle': '주변에서 일어나고 있는 일들이에요.',
     'home.reorder': '다시 주문할 수 있어요', 'home.order': '주문', 'home.yourFavorites': '즐겨찾기',
     'search.placeholder': '검색'
   },
@@ -224,7 +224,7 @@ var translations = {
     'time.1020': '10-20分', 'time.1525': '15-25分', 'time.2030': '20-30分',
     'time.3040': '30-40分', 'time.3045': '30-45分', 'time.4560': '45-60分',
     'promo.freeDelivery': '送料無料', 'promo.bogoPizza': 'ピザ1つ買うと1つ無料', 'promo.20off': '20%オフ',
-    'home.welcome': 'おかえりなさい、Anthony！👋', 'home.subtitle': '周りで起きていることをチェックしましょう。',
+    'home.welcome': 'おかえりなさい、Nolan！👋', 'home.subtitle': '周りで起きていることをチェックしましょう。',
     'home.reorder': 'また注文しませんか', 'home.order': '注文', 'home.yourFavorites': 'お気に入り',
     'search.placeholder': '検索'
   },
@@ -270,7 +270,7 @@ var translations = {
     'time.1020': '10-20 min', 'time.1525': '15-25 min', 'time.2030': '20-30 min',
     'time.3040': '30-40 min', 'time.3045': '30-45 min', 'time.4560': '45-60 min',
     'promo.freeDelivery': 'Livraison Gratuite', 'promo.bogoPizza': '2 pour 1 Pizza', 'promo.20off': '-20%',
-    'home.welcome': 'Bon retour, Anthony ! 👋', 'home.subtitle': 'Voici ce qui se passe autour de vous.',
+    'home.welcome': 'Bon retour, Nolan ! 👋', 'home.subtitle': 'Voici ce qui se passe autour de vous.',
     'home.reorder': 'À recommander', 'home.order': 'Commander', 'home.yourFavorites': 'Vos Favoris',
     'search.placeholder': 'Rechercher'
   }
