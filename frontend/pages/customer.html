@@ -291,10 +291,16 @@
                     gap: 10px;
                 }
 
-                .vibe-card:hover {
+                .vibe-card:hover,
+                .vibe-card.active {
                     transform: translateY(-2px);
                     border-color: var(--accent);
                     background: var(--bg-hover);
+                }
+
+                .vibe-card.active {
+                    background: var(--accent-light);
+                    border-color: var(--accent);
                 }
 
                 .vibe-emoji {
@@ -305,26 +311,30 @@
                     font-weight: 600;
                     color: var(--text-primary);
                 }
+
+                .hidden {
+                    display: none !important;
+                }
             </style>
             <div class="content-grid"
                 style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); margin-bottom: 30px;">
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="cozy">
                     <span class="vibe-emoji">☕️</span>
                     <span class="vibe-label">Cozy</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="late-night">
                     <span class="vibe-emoji">🌮</span>
                     <span class="vibe-label">Late Night</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="healthy">
                     <span class="vibe-emoji">🥗</span>
                     <span class="vibe-label">Healthy</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="date-night">
                     <span class="vibe-emoji">🍷</span>
                     <span class="vibe-label">Date Night</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="party">
                     <span class="vibe-emoji">🎉</span>
                     <span class="vibe-label">Party</span>
                 </div>
@@ -415,8 +425,9 @@
                     </div>
                 </a>
 
-                <!-- Restaurant 2 -->
-                <a href="/bella-italia" style="text-decoration: none;">
+                <!-- Bella Italia -->
+                <a href="/bella-italia" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="date-night cozy">
                     <div class="restaurant-card">
                         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
