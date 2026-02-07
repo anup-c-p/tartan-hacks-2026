@@ -220,10 +220,16 @@
                     gap: 10px;
                 }
 
-                .vibe-card:hover {
+                .vibe-card:hover,
+                .vibe-card.active {
                     transform: translateY(-2px);
                     border-color: var(--accent);
                     background: var(--bg-hover);
+                }
+
+                .vibe-card.active {
+                    background: var(--accent-light);
+                    border-color: var(--accent);
                 }
 
                 .vibe-emoji {
@@ -234,26 +240,30 @@
                     font-weight: 600;
                     color: var(--text-primary);
                 }
+
+                .hidden {
+                    display: none !important;
+                }
             </style>
             <div class="content-grid"
                 style="grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); margin-bottom: 30px;">
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="cozy">
                     <span class="vibe-emoji">☕️</span>
                     <span class="vibe-label">Cozy</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="late-night">
                     <span class="vibe-emoji">🌮</span>
                     <span class="vibe-label">Late Night</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="healthy">
                     <span class="vibe-emoji">🥗</span>
                     <span class="vibe-label">Healthy</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="date-night">
                     <span class="vibe-emoji">🍷</span>
                     <span class="vibe-label">Date Night</span>
                 </div>
-                <div class="vibe-card">
+                <div class="vibe-card" data-filter="party">
                     <span class="vibe-emoji">🎉</span>
                     <span class="vibe-label">Party</span>
                 </div>
@@ -323,9 +333,10 @@
                     color: black;
                 }
             </style>
-            <div class="content-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
-                <!-- Restaurant 1 -->
-                <a href="/szechuan" style="text-decoration: none;">
+            <div class="content-grid" id="restaurant-grid"
+                style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+                <!-- Szechuan Palace -->
+                <a href="/szechuan" style="text-decoration: none;" class="restaurant-link" data-tags="late-night cozy">
                     <div class="restaurant-card">
                         <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
@@ -335,17 +346,18 @@
                                 <div class="rating-badge">4.8</div>
                             </div>
                             <div class="restaurant-meta">
-                                <span>Chinese</span> • <span>$$</span> • <span>20-30 min</span>
+                                <span>Chinese</span> • <span>$$</span> • <span>30-45 min</span>
                             </div>
                             <div
-                                style="margin-top: 10px; font-size: 12px; color: var(--green); background: var(--green-light); display: inline-block; padding: 4px 8px; border-radius: 4px;">
+                                style="margin-top: 10px; font-size: 12px; color: var(--accent); background: var(--accent-light); display: inline-block; padding: 4px 8px; border-radius: 4px;">
                                 Free Delivery</div>
                         </div>
                     </div>
                 </a>
 
-                <!-- Restaurant 2 -->
-                <a href="/bella-italia" style="text-decoration: none;">
+                <!-- Bella Italia -->
+                <a href="/bella-italia" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="date-night cozy">
                     <div class="restaurant-card">
                         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
@@ -364,8 +376,9 @@
                     </div>
                 </a>
 
-                <!-- Restaurant 3 -->
-                <a href="/burger-joint" style="text-decoration: none;">
+                <!-- Burger Joint -->
+                <a href="/burger-joint" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="late-night party">
                     <div class="restaurant-card">
                         <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&h=400&fit=crop"
                             class="restaurant-img" alt="Food">
@@ -377,10 +390,169 @@
                             <div class="restaurant-meta">
                                 <span>American</span> • <span>$</span> • <span>30-45 min</span>
                             </div>
+                            <div
+                                style="margin-top: 10px; font-size: 12px; color: var(--accent); background: var(--accent-light); display: inline-block; padding: 4px 8px; border-radius: 4px;">
+                                20% Off</div>
                         </div>
                     </div>
                 </a>
+
+                <!-- Sushi Zen -->
+                <a href="/sushi-zen" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="healthy date-night">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Sushi Zen">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Sushi Zen</div>
+                                <div class="rating-badge">4.9</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Japanese</span> • <span>$$$</span> • <span>20-30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Taco Fiesta -->
+                <a href="/taco-fiesta" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="party late-night">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Taco Fiesta">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Taco Fiesta</div>
+                                <div class="rating-badge">4.7</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Mexican</span> • <span>$</span> • <span>15-25 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Green Leaf -->
+                <a href="/green-leaf" style="text-decoration: none;" class="restaurant-link" data-tags="healthy">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Green Leaf">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Green Leaf</div>
+                                <div class="rating-badge">4.8</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Salad</span> • <span>$$</span> • <span>10-20 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Curry House -->
+                <a href="/curry-house" style="text-decoration: none;" class="restaurant-link" data-tags="cozy">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Curry House">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Curry House</div>
+                                <div class="rating-badge">4.6</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Indian</span> • <span>$$</span> • <span>30-40 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- The Steakhouse -->
+                <a href="/steakhouse" style="text-decoration: none;" class="restaurant-link" data-tags="date-night">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="The Steakhouse">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">The Steakhouse</div>
+                                <div class="rating-badge">4.9</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Steak</span> • <span>$$$$</span> • <span>45-60 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Morning Brew -->
+                <a href="/morning-brew" style="text-decoration: none;" class="restaurant-link" data-tags="cozy healthy">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Morning Brew">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Morning Brew</div>
+                                <div class="rating-badge">4.5</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Cafe</span> • <span>$</span> • <span>10-20 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Pizza Slice -->
+                <a href="/pizza-slice" style="text-decoration: none;" class="restaurant-link"
+                    data-tags="late-night party">
+                    <div class="restaurant-card">
+                        <img src="https://images.unsplash.com/photo-1574126154517-d1e0d89e7344?w=600&h=400&fit=crop"
+                            class="restaurant-img" alt="Pizza Slice">
+                        <div class="restaurant-info">
+                            <div style="display:flex; justify-content:space-between; align-items:start;">
+                                <div class="restaurant-name">Pizza Slice</div>
+                                <div class="rating-badge">4.3</div>
+                            </div>
+                            <div class="restaurant-meta">
+                                <span>Pizza</span> • <span>$</span> • <span>15-25 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const vibeCards = document.querySelectorAll('.vibe-card');
+                    const restaurantLinks = document.querySelectorAll('.restaurant-link');
+
+                    vibeCards.forEach(card => {
+                        card.addEventListener('click', () => {
+                            // Toggle active class
+                            if (card.classList.contains('active')) {
+                                card.classList.remove('active');
+                                // Show all
+                                restaurantLinks.forEach(link => link.classList.remove('hidden'));
+                            } else {
+                                // Activate new vibe
+                                vibeCards.forEach(c => c.classList.remove('active'));
+                                card.classList.add('active');
+
+                                const filter = card.dataset.filter;
+
+                                // Filter logic
+                                restaurantLinks.forEach(link => {
+                                    const tags = link.dataset.tags.split(' ');
+                                    if (tags.includes(filter)) {
+                                        link.classList.remove('hidden');
+                                    } else {
+                                        link.classList.add('hidden');
+                                    }
+                                });
+                            }
+                        });
+                    });
+            </script>
 
         </main>
     </div>
