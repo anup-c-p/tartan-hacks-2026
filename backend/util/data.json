@@ -2,27 +2,25 @@
   "storeId": "store_123",
   "ownerId": "user_456",
   "info": {
-    "name": "Joe's Burgers",
-    "description": "A casual burger joint serving fresh homemade burgers",
+    "name": "Szechuan Palace",
+    "description": "Authentic Szechuan cuisine with spicy dishes",
     "type": "restaurant",
     "categories": [
-      "Burgers",
-      "Fast Casual",
-      "American"
+      "Chinese"
     ],
     "tags": [
-      "Family Friendly",
-      "Late Night",
+      "Spicy",
+      "Authentic",
       "Takeout"
     ],
     "priceRange": "$$"
   },
   "contact": {
     "phone": "+1-555-123-4567",
-    "email": "contact@joesburgers.com"
+    "email": "contact@szechuanpalace.com"
   },
   "location": {
-    "addressLine1": "123 Main St",
+    "addressLine1": "456 Dragon St",
     "addressLine2": "",
     "city": "Springfield",
     "state": "IL",
@@ -32,71 +30,54 @@
       "lat": 39.7817,
       "lng": -89.6501
     },
-    "directionsNote": "Parking behind building"
+    "directionsNote": "Parking in rear"
   },
   "menu": {
     "currency": "USD",
     "categories": [
       {
-        "id": "cat_burgers",
-        "name": "Burgers",
+        "id": "cat_popular",
+        "name": "Popular Items",
         "items": [
           {
-            "id": "item_classic",
-            "name": "Classic Burger",
-            "description": "Beef patty, lettuce, tomato, cheese",
-            "price": 8.99,
-            "image": "photo_1"
+            "id": "item_kung_pao",
+            "name": "Kung Pao Chicken",
+            "description": "Spicy diced chicken with peanuts, vegetables and chili peppers.",
+            "price": 14.95,
+            "image": ""
           },
           {
-            "id": "item_bacon",
-            "name": "Bacon Burger",
-            "description": "Beef patty, bacon, lettuce, tomato, cheese",
-            "price": 9.99,
-            "image": "photo_2"
+            "id": "item_mapo_tofu",
+            "name": "Mapo Tofu",
+            "description": "Soft tofu set in a spicy chili- and bean-based sauce.",
+            "price": 12.95,
+            "image": ""
+          }
+        ]
+      },
+      {
+        "id": "cat_appetizers",
+        "name": "Appetizers",
+        "items": [
+          {
+            "id": "item_spring_rolls",
+            "name": "Spring Rolls (2)",
+            "description": "Crispy vegetable rolls.",
+            "price": 4.95,
+            "image": ""
+          },
+          {
+            "id": "item_dumplings",
+            "name": "Dumplings (6)",
+            "description": "Steamed or fried pork dumplings.",
+            "price": 7.95,
+            "image": ""
           }
         ]
       }
     ]
   },
-  "photos": [
-    {
-      "id": "photo_54f6fd832cf640609179f57152af1a1f",
-      "url": "/uploads/5444ca1a5d204cc8ba0ff30bef2d172c_IMG_6579.JPG",
-      "type": "uploaded",
-      "caption": ""
-    },
-    {
-      "id": "photo_12de7a40b7bd40e4994bd1568cad5800",
-      "url": "/uploads/8bd58d097f6d411bb6914324c07bdac7_IMG_5585.JPG",
-      "type": "uploaded",
-      "caption": ""
-    },
-    {
-      "id": "photo_19198d45165244339fe082bf994ccb74",
-      "url": "/uploads/bd2dba8dbf13478a9c58311a1edd63e9_IMG_6058.JPG",
-      "type": "uploaded",
-      "caption": ""
-    },
-    {
-      "id": "photo_39873b690fd94bc29bc28dc75ebff56f",
-      "url": "/uploads/d466a0e0988f42ae94a66d1ee286b731_IMG_5097.JPG",
-      "type": "uploaded",
-      "caption": ""
-    },
-    {
-      "id": "photo_159a14ba1d8a43219411a2e4219852d0",
-      "url": "/uploads/48a758f81fad4585a8c35375ae8f5902_IMG_3824.JPG",
-      "type": "uploaded",
-      "caption": ""
-    },
-    {
-      "id": "photo_fa0ab1a112c04bf7bef975d83d28e821",
-      "url": "/uploads/ec7af341cf7940b0ac4ea41bb4b246ab_IMG_9161.JPG",
-      "type": "uploaded",
-      "caption": ""
-    }
-  ],
+  "photos": [],
   "hours": {
     "timezone": "America/Chicago",
     "regular": {
@@ -118,14 +99,15 @@
       },
       "friday": {
         "open": "10:00",
-        "close": "23:00"
+        "close": "22:00"
       },
       "saturday": {
-        "open": "11:00",
-        "close": "23:00"
+        "open": "10:00",
+        "close": "22:00"
       },
       "sunday": {
-        "closed": true
+        "open": "10:00",
+        "close": "22:00"
       }
     },
     "special": [
