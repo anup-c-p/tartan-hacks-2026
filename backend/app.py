@@ -50,9 +50,9 @@ def client_page():
 def customer_page():
     return send_from_directory(PAGES_DIR, "customer.html")
     
-@app.get("/business")
-def business_page():
-    return send_from_directory(PAGES_DIR, "business.html")
+@app.get("/szechuan")
+def szechuan_page():
+    return send_from_directory(PAGES_DIR, "szechuan.html")
 
 
 @app.get("/home")
